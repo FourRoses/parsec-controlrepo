@@ -2,7 +2,6 @@ class profile::base {
   include ::stdlib
   include ::motd
   include ::vim
-  include ::webmin
   include ::xinetd
   include ::netcat
   include ::dnsclient
@@ -21,22 +20,6 @@ class profile::base {
     }
     include ::repos::siv
   }
-
-#  if $::virtual == 'vmware' {
-#    class {'vmware_tools': stage => 'runtime'}
-#    if $::osfamily == 'RedHat' {
-#      realize(Yum::Repo['vmware_tools'])
-#    }
-#  }
-
-#  class { '::vmwaretools':
-#    reposerver            => 'http://16.0.96.20:3142/',
-#    repopath              => 'packages.vmware.com/tools',
-#    just_prepend_repopath => true,
-#    tools_version         => "${::vmware}latest",
-#    autoupgrade           => true,
-# #   stage                 => 'runtime',
-#  }
 
   class {'::puppet':
     version     => 'latest',
@@ -66,6 +49,13 @@ class profile::base {
     user => 'root',
     type => 'ssh-rsa',
     key  => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDdQbBN8LrvMIwl34lXmZ8tFj6oa9bXeLzy+QQCn6dvZMWFh3yD5Mdx9iv7DVDSZyJYoT6RqKA+qFGnOCU/HcKkFCwrK1Z0CRmJR/dmZrc+tfqtXOU60Lb4mEnUkcWhRJm9dfF4XYuTNR4x7qflaMn8yDkUYaaUK1Aj5a1uadJvII10OQVoT2GTFFhB82mITLNYrQR9WpuAVKrEn52i37rSDtMmU9GHq6jHkfckTfi8C+MVkcLSjluzm0cq+kePdw4V3WYJXbOsFfPWfMwWSOi/5cobiKiYIenxldWKjkk1UvfGUZcBkDrAmQDLq5KUKLRrB+kjb2XLTy0Ap/a2/2QJ',
+  }
+
+  ssh_authorized_key {"root@wminpsu01":
+    ensure => present,
+    key    => "AAAAB3NzaC1yc2EAAAABIwAAAQEA20/PRghF40nal+EqAbkIZfz2TKMMhYx5gnfzdMmWmXZLjyfjZ/krf4EWLzLeB9QzcEw5v+Os6PnD45xHOUic36w8bxNooJaBq/DflHtUUMTa66OIt91mBRZyTJ2napfVDSCDq9hqkVpO9HSyUPLp6c63BwR88nNupsIEuxWB0Ix7R2TAMl9kT6bhVkVVUd2/YYFX3AYN/yjE6nqUET+bffTmg+44gVgbL2drZsVKzL7ATGSq5rHd/PdaKa6WIZl0tIw+ut+POX/xSV3F3E/RGhait7DvFL5ZQDOfhzl0sV40IiiTBF6l43sN+IFMvNBuUTxFxdUUx+lwjPs0wIv9wQ==",
+    type   => ssh-rsa,
+    user   => "root",
   }
 
 }
