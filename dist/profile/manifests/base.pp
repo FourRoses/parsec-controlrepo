@@ -60,5 +60,3 @@ class profile::base {
     ensure => installed,
   }
 }
-
-}
