@@ -22,4 +22,6 @@ mod "theforeman/puppet", "4.0.1"
 mod "theforeman/tftp", "1.5.1"
 mod "thias/samba", "0.1.5"
 mod "wolfspyre/vmware_puppetfact", "0.2.2"
+mod "jeffmccune/motd", "1.0.3"
+
 
