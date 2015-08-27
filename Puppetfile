@@ -2,6 +2,8 @@ forge "http://forge.puppetlabs.com"
 
 # Modules from the Puppet Forge
 mod "adrien/alternatives", "0.3.0"
+mod "adrien/boolean", "1.0.1"
+mod "adrien/filemapper", "1.1.3"
 mod "darin/zypprepo", "1.0.2"
 mod "ghoneycutt/dnsclient", "3.4.0"
 mod "ghoneycutt-vim", "2.10.0"
@@ -24,3 +26,6 @@ mod "theforeman/puppet", "4.0.1"
 mod "theforeman/tftp", "1.5.1"
 mod "thias/samba", "0.1.5"
 mod "wolfspyre/vmware_puppetfact", "0.2.2"
+
+mod 'network',
+  :git => 'https://github.com/puppet-community/puppet-network.git'
