@@ -22,26 +22,26 @@ class profile::base {
     }
 
     apt::source {'ubuntu':
-      location => 'http://16.0.96.20:3142/archive.ubuntu.com/ubuntu',
-      repos    => 'main restricted universe multiverse',
+      location    => 'http://16.0.96.20:3142/archive.ubuntu.com/ubuntu',
+      repos       => 'main restricted universe multiverse',
       include_src => false,
     }
     apt::source {'ubuntu-security':
-      location => 'http://16.0.96.20:3142/archive.ubuntu.com/ubuntu',
-      repos    => 'main restricted universe multiverse',
-      release  => "${lsbdistcodename}-security",
+      location    => 'http://16.0.96.20:3142/archive.ubuntu.com/ubuntu',
+      repos       => 'main restricted universe multiverse',
+      release     => "${lsbdistcodename}-security",
       include_src => false,
     }
     apt::source {'ubuntu-updates':
-      location => 'http://16.0.96.20:3142/archive.ubuntu.com/ubuntu',
-      repos    => 'main restricted universe multiverse',
-      release  => "${lsbdistcodename}-updates",
+      location    => 'http://16.0.96.20:3142/archive.ubuntu.com/ubuntu',
+      repos       => 'main restricted universe multiverse',
+      release     => "${lsbdistcodename}-updates",
       include_src => false,
     }
     apt::source {'ubuntu-backports':
-      location => 'http://16.0.96.20:3142/archive.ubuntu.com/ubuntu',
-      repos    => 'main restricted universe multiverse',
-      release  => "${lsbdistcodename}-backports",
+      location    => 'http://16.0.96.20:3142/archive.ubuntu.com/ubuntu',
+      repos       => 'main restricted universe multiverse',
+      release     => "${lsbdistcodename}-backports",
       include_src => false,
     }
     apt::key {'puppetlabs':
@@ -50,8 +50,8 @@ class profile::base {
       key_source => 'http://16.0.96.20/repo/puppet/pubkey.gpg',
     }
     apt::source {'puppetlabs':
-      location => 'http://16.0.96.20:3142/apt.puppetlabs.com',
-      repos    => 'main dependencies',
+      location    => 'http://16.0.96.20:3142/apt.puppetlabs.com',
+      repos       => 'main dependencies',
       include_src => false,
     }
   }
@@ -72,7 +72,7 @@ class profile::base {
   }
 
   class {'::ntp':
-    servers => hiera('ntp::params::servers'),
+    servers       => hiera('ntp::params::servers'),
     iburst_enable => true,
   }
 
@@ -92,9 +92,9 @@ class profile::base {
   }
 
   ssh_authorized_key { 'root@wminpsu01':
-    user   => 'root',
-    type   => 'ssh-rsa',
-    key    => 'AAAAB3NzaC1yc2EAAAABIwAAAQEA20/PRghF40nal+EqAbkIZfz2TKMMhYx5gnfzdMmWmXZLjyfjZ/krf4EWLzLeB9QzcEw5v+Os6PnD45xHOUic36w8bxNooJaBq/DflHtUUMTa66OIt91mBRZyTJ2napfVDSCDq9hqkVpO9HSyUPLp6c63BwR88nNupsIEuxWB0Ix7R2TAMl9kT6bhVkVVUd2/YYFX3AYN/yjE6nqUET+bffTmg+44gVgbL2drZsVKzL7ATGSq5rHd/PdaKa6WIZl0tIw+ut+POX/xSV3F3E/RGhait7DvFL5ZQDOfhzl0sV40IiiTBF6l43sN+IFMvNBuUTxFxdUUx+lwjPs0wIv9wQ==',
+    user => 'root',
+    type => 'ssh-rsa',
+    key  => 'AAAAB3NzaC1yc2EAAAABIwAAAQEA20/PRghF40nal+EqAbkIZfz2TKMMhYx5gnfzdMmWmXZLjyfjZ/krf4EWLzLeB9QzcEw5v+Os6PnD45xHOUic36w8bxNooJaBq/DflHtUUMTa66OIt91mBRZyTJ2napfVDSCDq9hqkVpO9HSyUPLp6c63BwR88nNupsIEuxWB0Ix7R2TAMl9kT6bhVkVVUd2/YYFX3AYN/yjE6nqUET+bffTmg+44gVgbL2drZsVKzL7ATGSq5rHd/PdaKa6WIZl0tIw+ut+POX/xSV3F3E/RGhait7DvFL5ZQDOfhzl0sV40IiiTBF6l43sN+IFMvNBuUTxFxdUUx+lwjPs0wIv9wQ==',
   }
 
   package { 'netcat':
