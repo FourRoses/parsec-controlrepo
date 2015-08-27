@@ -1,11 +1,9 @@
 class profile::sivestacion {
-  #class {'::user::siv': } ->
   #class {'::dkms': } ->
   #class {'::metro::siv::estacion': } ->
-  #class {'::rlogin': } ->
-  #Class ['::profile::sivestacion']
 
-  package {['libncurses5-dev','libssl-dev','libssl0.9.8']: }
+  package {['libncurses5-dev','libssl-dev','libssl0.9.8']: } # for dgrp compatibility
+
   package {'tcsh': }
 
   network::interface { $::foreman_interfaces[0][identifier]:
@@ -17,4 +15,34 @@ class profile::sivestacion {
     ensure  => present,
     content => "SUBSYSTEM==\"net\", ACTION==\"add\", DRIVERS==\"?*\", ATTR{address}==\"${::foreman_interfaces[0][mac]}\", ATTR{dev_id}==\"0x0\", ATTR{type}==\"1\", KERNEL==\"eth*\", NAME=\"${::foreman_interfaces[0][identifier]}\"\n",
   }
+
+  package {'rsh-redone-server': }
+  xinetd::service {'login':
+    server => '/usr/sbin/in.rlogind',
+    port   => '513',
+    wait   => 'no',
+  }
+  xinetd::service {'shell':
+    server => '/usr/sbin/in.rshd',
+    port   => '514',
+    wait   => 'no',
+  }
+
+  user { 'siv':
+    ensure     => present,
+    uid        => '201',
+    gid        => '503',
+    groups     => 'audio',
+    comment    => 'Usuario aplicacion SICO',
+    home       => '/home/siv',
+    password   => '$1$5rsm.4fQ$VheMuU8NS0GTzoYYpRYLZ0',
+    shell      => '/bin/csh',
+    managehome => true,
+  }
+
+  group { 'siv':
+    ensure => present,
+    gid    => '503',
+  }
+
 }
