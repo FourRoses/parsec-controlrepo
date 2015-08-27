@@ -44,16 +44,12 @@ class profile::base {
       release     => "${lsbdistcodename}-backports",
       include_src => false,
     }
-    apt::key {'puppetlabs':
-      ensure     => present,
-    #  key        => '0x4BD6EC30',
-      key        => '36E47E1CC4DCC5E8152D115CC0B5E0AB66FD4949',
-      key_source => 'http://16.0.96.20/repo/puppet/pubkey.gpg',
-    }
     apt::source {'puppetlabs':
-      location    => 'http://16.0.96.20:3142/apt.puppetlabs.com',
+      location    => 'http://16.0.96.20/repo/apt.puppetlabs.com',
       repos       => 'main dependencies',
       include_src => false,
+      key         => '47B320EB4C7C375AA9DAE1A01054B7A24BD6EC30',
+      key_source  => 'http://16.0.96.20/repo/puppet/pubkey.gpg',
     }
   }
 
