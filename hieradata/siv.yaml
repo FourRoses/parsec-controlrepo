@@ -1,0 +1,1680 @@
+---
+ntp::params::servers : [ 'FuenteReloj', 'rFuenteReloj' ]
+
+snmp::service_hasstatus : false
+snmp::com2sec : ['notConfigUser  16.0.74.0/24    public',
+                 'notConfigUser  16.3.74.0/24    public',
+                 'notConfigUser  16.0.4.33/32    public']
+snmp::snmpd_config : ['exec raid-md0 /usr/bin/nagios-linux-swraid.pl --device=md0',
+                      'exec raid-md1 /usr/bin/nagios-linux-swraid.pl --device=md1',
+                      'exec raid-md2 /usr/bin/nagios-linux-swraid.pl --device=md2',
+                      'exec raid-md3 /usr/bin/nagios-linux-swraid.pl --device=md3',
+                      'exec raid-md6 /usr/bin/nagios-linux-swraid.pl --device=md6',
+                      'exec carteles /usr/bin/check_carteles.pl',
+                      'exec cartelesV /usr/bin/check_carteles_V.pl',
+                      'exec cartelesPAV /usr/bin/check_carteles_PAV.pl',
+                      'exec cartelesTC /usr/bin/check_carteles_TC.pl',
+                      'exec comms /usr/bin/check_comms.pl',
+                      'exec megafonia /usr/bin/check_megafonia.pl',
+                      'exec fichCFG /usr/bin/check_fichCFG.sh',
+                      'exec reconex /usr/bin/check_reconex.pl',
+                      'exec sincro /usr/bin/check_ntp_time -H FuenteReloj',
+                      'exec cartelesALL /usr/bin/check_carteles_ALL.pl',
+                      'disk /',
+                      'disk /home',
+                      'disk /usr/local']
+
+uis: false
+megafonia: false
+arcom: false
+tce: false
+maestra: false
+reboot: false
+siv: false
+cartel_ip: false
+sondas: false
+
+siv_hosts:
+# LINEA 1
+  sivpinarchamartin1:
+    ip: 16.97.49.62
+    loc: [1, 53, 10]
+  sivbambu:
+    ip: 16.96.49.63
+    loc: [1, 52, 10]
+  sivchamartin1:
+    ip: 18.131.49.43
+    loc: [1, 51, 10]
+  sivcastilla1:
+    ip: 16.0.61.14
+    loc: [1, 1, 10]
+  sivvaldeacederas:
+    ip: 16.66.49.62
+    loc: [1, 2, 10]
+  sivtetuan:
+    ip: 16.67.49.60
+    loc: [1, 3, 10]
+  sivestrecho:
+    ip: 16.0.61.13
+    loc: [1, 4, 10]
+  sivalvarado:
+    ip: 16.69.49.60
+    loc: [1, 5, 10]
+  sivccaminos1:
+    ip: 16.143.49.42
+    loc: [1, 6, 10]
+  sivriosrosas:
+    ip: 16.71.49.60
+    loc: [1, 7, 10]
+  siviglesia:
+    ip: 16.72.49.60
+    loc: [1, 8, 10]
+  sivbilbao1:
+    ip: 16.0.61.19 
+    loc: [1, 9, 10]
+  sivtribunal1:
+    ip: 18.138.49.62
+    loc: [1, 10, 10]
+  sivgranvia1:
+    ip: 17.78.49.41
+    loc: [1, 11, 10]
+  sivsol1:
+    ip: 16.198.49.44
+    loc: [1, 12, 10]
+  sivtirsomolina:
+    ip: 19.77.49.60
+    loc: [1, 13, 10]
+  sivantonmartin:
+    ip: 19.78.49.60
+    loc: [1, 14, 10]
+  sivatocha:
+    ip: 19.79.49.60
+    loc: [1, 15, 10]
+  sivarenfe:
+    ip: 19.80.49.60
+    loc: [1, 16, 10]
+  sivpelayo:
+    ip: 19.81.49.62
+    loc: [1, 17, 10]
+  sivpacifico1:
+    ip: 17.138.49.60
+    loc: [1, 18, 10]
+  sivpuentevallecas:
+    ip: 19.83.49.60
+    loc: [1, 19, 10]
+  sivnumancia:
+    ip: 20.84.49.60
+    loc: [1, 20, 10]
+  sivportazgo:
+    ip: 20.85.49.60
+    loc: [1, 21, 10]
+  sivbuenosaires:
+    ip: 20.86.49.60
+    loc: [1, 22, 10]
+  sivaltoarenal:
+    ip: 20.87.49.60
+    loc: [1, 23, 10]
+  sivmiguelhdez:
+    ip: 20.88.49.60
+    loc: [1, 24, 10]
+  sivguadalupe:
+    ip: 20.89.49.60
+    loc: [1, 25, 10]
+  sivvillavallecas:
+    ip: 20.90.49.60
+    loc: [1, 26, 10]
+  sivcongosto:
+    ip: 20.91.49.60
+    loc: [1, 27, 10]
+  sivlagavia:
+    ip: 20.92.49.60
+    loc: [1, 28, 10]
+  sivlsuertes:
+    ip: 20.93.49.61
+    loc: [1, 29, 10]
+  sivvaldecarros:
+    ip: 20.94.49.60
+    loc: [1, 30, 10]
+
+# LINEA 2
+  sivlasrosas:
+    ip: 20.148.49.8
+    loc: [2, 55, 10]
+  sivguadalajara:
+    ip: 20.147.49.8
+    loc: [2, 54, 10]
+  sivalsacia:
+    ip: 20.146.49.8
+    loc: [2, 53, 10]
+  sivalmudena:
+    ip: 20.145.49.8
+    loc: [2, 52, 10]
+  sivlaelipa:
+    ip: 16.144.49.10
+    loc: [2, 51, 10]
+  sivventas:
+    ip: 16.129.49.42
+    loc: [2, 1, 10]
+  sivmbecerra2:
+    ip: 16.130.49.41
+    loc: [2, 2, 10]
+  sivgoya2:
+    ip: 16.131.49.42
+    loc: [2, 3, 10]
+  sivpvergara2:
+    ip: 18.76.49.42
+    loc: [2, 4, 10]
+  sivretiro:
+    ip: 16.133.49.41
+    loc: [2, 5, 10]
+  sivbancoespana:
+    ip: 16.134.49.41
+    loc: [2, 6, 10]
+  sivsevilla:
+    ip: 16.135.49.41
+    loc: [2, 7, 10]
+  sivsol2:
+    ip: 16.198.49.45
+    loc: [2, 8, 10]
+  sivopera:
+    ip: 16.137.49.42
+    loc: [2, 9, 10]
+  sivsantodomingo:
+    ip: 16.138.49.41
+    loc: [2, 10, 10]
+  sivnoviciado:
+    ip: 16.139.49.41
+    loc: [2, 11, 10]
+  sivsanbernardo2:
+    ip: 16.140.49.41
+    loc: [2, 12, 10]
+  sivquevedo:
+    ip: 16.141.49.41
+    loc: [2, 13, 10]
+  sivcanal2:
+    ip: 16.142.49.41
+    loc: [2, 14, 10]
+  sivccaminos2:
+    ip: 16.143.49.41
+    loc: [2, 15, 10]
+
+# LINEA 3
+  sivmoncloa3:
+    ip: 16.203.49.41
+    loc: [3, 11, 10]
+  sivarguelles3:
+    ip: 16.202.49.41
+    loc: [3, 10, 10]
+  sivventura:
+    ip: 16.201.49.42
+    loc: [3, 9, 10]
+  sivpzaespana3:
+    ip: 16.200.49.41
+    loc: [3, 8, 10]
+  sivcallao3:
+    ip: 16.199.49.41
+    loc: [3, 7, 10]
+  sivsol3:
+    ip: 16.198.49.41
+    loc: [3, 6, 10]
+  sivlavapies:
+    ip: 16.197.49.41
+    loc: [3, 5, 10]
+  sivembajadores:
+    ip: 16.196.49.41
+    loc: [3, 4, 10]
+  sivpalosfrontera:
+    ip: 16.195.49.41
+    loc: [3, 3, 10]
+  sivdelicias:
+    ip: 16.194.49.41
+    loc: [3, 02, 10]
+  sivlegazpi3:
+    ip: 16.193.49.42
+    loc: [3, 1, 10]
+  sivalmendrales:
+    ip: 20.204.49.10
+    loc: [3, 51, 10]
+  sivdoceoctubre:
+    ip: 20.205.49.10
+    loc: [3, 52, 10]
+  sivsanfermin:
+    ip: 20.206.49.10
+    loc: [3, 53, 10]
+  sivciudadangeles:
+    ip: 20.207.49.10
+    loc: [3, 54, 10]
+  sivcrucevillaverde:
+    ip: 20.208.49.10
+    loc: [3, 55, 10]
+  sivsancristobal:
+    ip: 20.209.49.10
+    loc: [3, 56, 10]
+  sivvillaverdealto:
+    ip: 20.210.49.10
+    loc: [3, 57, 10]
+
+# LINEA 4
+  sivpinarchamartin4:
+    ip: 16.97.49.66
+    loc: [4, 23, 10]
+  sivmanoteras:
+    ip: 35.22.49.62
+    loc: [4, 22, 10]
+  sivhortaleza:
+    ip: 35.21.49.62
+    loc: [4, 21, 10]
+  sivpsantamaria:
+    ip: 35.20.49.60
+    loc: [4, 20, 10]
+  sivsanlorenzo:
+    ip: 35.19.49.60
+    loc: [4, 19, 10]
+  sivmarcristal4:
+    ip: 18.4.49.60
+    loc: [4, 18, 10]
+  sivcanillas:
+    ip: 35.17.49.60
+    loc: [4, 17, 10]
+  sivesperanza:
+    ip: 16.0.61.124
+    loc: [4, 16, 10]
+  sivarturosoria:
+    ip: 35.15.49.60
+    loc: [4, 15, 10]
+  sivavenidapaz:
+    ip: 35.14.49.60
+    loc: [4, 14, 10]
+  sivalfonsoxiii:
+    ip: 35.13.49.60
+    loc: [4, 13, 10]
+  sivprosperidad:
+    ip: 35.12.49.60
+    loc: [4, 12, 10]
+  sivavdaamerica4:
+    ip: 18.74.49.68
+    loc: [4, 11, 10]
+  sivdiegoleon4:
+    ip: 17.73.49.41
+    loc: [4, 10, 10]
+  sivlista:
+    ip: 17.9.49.60
+    loc: [4, 9, 10]
+  sivgoya4:
+    ip: 16.131.49.41
+    loc: [4, 8, 10]
+  sivvelazquez:
+    ip: 17.7.49.60
+    loc: [4, 7, 10]
+  sivserrano:
+    ip: 17.6.49.60
+    loc: [4, 6, 10]
+  sivcolon:
+    ip: 17.5.49.60
+    loc: [4, 5, 10]
+  sivamartinez4:
+    ip: 18.137.49.67
+    loc: [4, 4, 10]
+  sivbilbao4:
+    ip: 16.0.61.16
+    loc: [4, 3, 10]
+  sivsanbernardo4:
+    ip: 16.140.49.42
+    loc: [4, 2, 10]
+  sivarguelles4:
+    ip: 16.2.61.18
+    loc: [4, 1, 10]
+
+# LINEA 5
+  sivalamedaosuna:
+    ip: 17.96.49.10
+    loc: [5, 52, 10]
+  sivelcapricho:
+    ip: 17.95.49.10
+    loc: [5, 51, 10]
+  sivcanillejas:
+    ip: 17.65.49.41
+    loc: [5, 1, 10]
+  sivtorrearias:
+    ip: 17.66.49.41
+    loc: [5, 2, 10]
+  sivsuances:
+    ip: 16.2.61.27
+    loc: [5, 3, 10]
+  sivclineal:
+    ip: 16.0.61.17
+    loc: [5, 4, 10]
+  sivpueblonuevo5:
+    ip: 17.69.49.228
+    loc: [5, 5, 10]
+  sivquintana:
+    ip: 17.70.49.60
+    loc: [5, 6, 10]
+  sivelcarmen:
+    ip: 17.71.49.41
+    loc: [5, 7, 10]
+  sivventas5:
+    ip: 16.129.49.41
+    loc: [5, 8, 10]
+  sivdiegoleon5:
+    ip: 17.73.49.60
+    loc: [5, 9, 10]
+  sivnunezbalboa5:
+    ip: 18.75.49.62
+    loc: [5, 10, 10]
+  sivrubendario:
+    ip: 17.75.49.60
+    loc: [5, 11, 10]
+  sivamartinez:
+    ip: 18.137.49.64
+    loc: [5, 12, 10]
+  sivchueca:
+    ip: 17.77.49.41
+    loc: [5, 13, 10]
+  sivgranvia5:
+    ip: 17.78.49.60
+    loc: [5, 14, 10]
+  sivcallao:
+    ip: 16.199.49.43
+    loc: [5, 15, 10]
+  sivopera5:
+    ip: 16.137.49.41
+    loc: [5, 16, 10]
+  sivlatina:
+    ip: 35.81.49.41
+    loc: [5, 17, 10]
+  sivptatoledo:
+    ip: 35.82.49.33
+    loc: [5, 18, 10]
+  sivacacias:
+    ip: 16.2.61.21
+    loc: [5, 19, 10]
+  sivpiramides:
+    ip: 35.84.49.41
+    loc: [5, 20, 10]
+  sivmvadillo:
+    ip: 35.85.49.226
+    loc: [5, 21, 10]
+  sivurgel:
+    ip: 35.86.49.41
+    loc: [5, 22, 10]
+  sivoporto5:
+    ip: 35.87.49.60
+    loc: [5, 23, 10]
+  sivvistalegre:
+    ip: 35.88.49.41
+    loc: [5, 24, 10]
+  sivcarabanchel:
+    ip: 35.89.49.60
+    loc: [5, 25, 10]
+  sivemontijo:
+    ip: 35.90.49.41
+    loc: [5, 26, 10]
+  sivaluche:
+    ip: 35.91.49.60
+    loc: [5, 27, 10]
+  sivempalme:
+    ip: 35.92.49.60
+    loc: [5, 28, 10]
+  sivcampamento:
+    ip: 35.93.49.225
+    loc: [5, 29, 10]
+  sivcasacampo5:
+    ip: 36.143.49.61
+    loc: [5, 30, 10]
+
+# LINEA 6
+  sivlaguna:
+    ip: 17.129.49.65
+    loc: [6, 1, 10]
+  sivcarpetana:
+    ip: 17.130.49.64
+    loc: [6, 2, 10]
+  sivoporto:
+    ip: 35.87.49.65
+    loc: [6, 3, 10]
+  sivopanel:
+    ip: 17.132.49.64
+    loc: [6, 4, 10]
+  siveliptica:
+    ip: 18.193.49.63
+    loc: [6, 5, 10]
+  sivusera:
+    ip: 17.134.49.64
+    loc: [6, 6, 10]
+  sivlegazpi:
+    ip: 16.193.49.41
+    loc: [6, 7, 10]
+  sivarganzuela:
+    ip: 17.136.49.62
+    loc: [6, 8, 10]
+  sivmendez:
+    ip: 17.137.49.60
+    loc: [6, 9, 10]
+  sivpacifico:
+    ip: 17.138.49.69
+    loc: [6, 10, 10]
+  sivcondecasal:
+    ip: 35.139.49.64
+    loc: [6, 11, 10]
+  sivsainzbaranda:
+    ip: 36.78.49.68
+    loc: [6, 12, 10]
+  sivodonell:
+    ip: 35.141.49.64
+    loc: [6, 13, 10]
+  sivmbecerra:
+    ip: 16.130.49.68
+    loc: [6, 14, 10]
+  sivdiegoleon:
+    ip: 17.73.49.68
+    loc: [6, 15, 10]
+  sivavdaamerica:
+    ip: 18.74.49.80
+    loc: [6, 16, 10]
+  sivargentina:
+    ip: 35.145.49.64
+    loc: [6, 17, 10]
+  sivministerios:
+    ip: 18.2.49.77
+    loc: [6, 18, 10]
+  sivccaminos:
+    ip: 16.143.49.43
+    loc: [6, 19, 10]
+  sivguzmanbueno:
+    ip: 35.207.49.64
+    loc: [6, 20, 10]
+  sivmetropolitano:
+    ip: 49.21.63.33
+    loc: [6, 21, 10]
+  sivuniversitaria:
+    ip: 35.150.49.64
+    loc: [6, 22, 10]
+  sivmoncloa:
+    ip: 16.203.49.60
+    loc: [6, 23, 10]
+  sivarguelles:
+    ip: 16.202.49.60
+    loc: [6, 24, 10]
+  sivprincipepio:
+    ip: 36.140.49.64
+    loc: [6, 25, 10]
+  sivptaangel:
+    ip: 17.154.49.64
+    loc: [6, 26, 10]
+  sivextremadura:
+    ip: 17.155.49.64
+    loc: [6, 27, 10]
+  sivlucero:
+    ip: 17.156.49.64
+    loc: [6, 28, 10]
+
+# LINEA 7
+  sivhhenares:
+    ip: 37.138.49.8
+    loc: [7, 60, 10]
+  sivhenares:
+    ip: 37.137.49.8
+    loc: [7, 59, 10]
+  sivjarama:
+    ip: 37.136.49.8
+    loc: [7, 58, 10]
+  sivsanfernando:
+    ip: 37.135.49.8
+    loc: [7, 57, 10]
+  sivlarambla:
+    ip: 37.134.49.8
+    loc: [7, 56, 10]
+  sivcosladacentral:
+    ip: 37.133.49.8
+    loc: [7, 55, 10]
+  sivbarriopuerto:
+    ip: 37.132.49.8
+    loc: [7, 54, 10]
+  sivestadiolimpico15:
+    ip: 37.129.49.14
+    loc: [7, 51, 11]
+  sivestadiolimpico7:
+    ip: 37.129.49.8
+    loc: [7, 51, 10]
+  sivlasmusas:
+    ip: 17.193.49.41
+    loc: [7, 1, 10]
+  sivsanblas:
+    ip: 17.194.49.41
+    loc: [7, 2, 10]
+  sivsimancas:
+    ip: 17.195.49.41
+    loc: [7, 3, 10]
+  sivgnoblejas:
+    ip: 17.196.49.41
+    loc: [7, 4, 10]
+  sivascao:
+    ip: 17.197.49.41
+    loc: [7, 5, 10]
+  sivpueblonuevo:
+    ip: 17.69.49.41
+    loc: [7, 6, 10]
+  sivbconcepcion:
+    ip: 17.199.49.41
+    loc: [7, 7, 10]
+  sivpavenidas:
+    ip: 17.200.49.41
+    loc: [7, 8, 10]
+  sivcartagena:
+    ip: 17.201.49.41
+    loc: [7, 9, 10]
+  sivavdaamerica7:
+    ip: 18.74.49.64
+    loc: [7, 10, 10]
+  sivmaranon:
+    ip: 18.136.49.41
+    loc: [7, 11, 10]
+  sivalonsocano:
+    ip: 17.204.49.41
+    loc: [7, 12, 10]
+  sivcanal:
+    ip: 16.142.49.42
+    loc: [7, 13, 10]
+  sivfilipinas:
+    ip: 35.206.49.41
+    loc: [7, 14, 10]
+  sivguzmanbueno7:
+    ip: 35.207.49.41
+    loc: [7, 15, 10]
+  sivfrodriguez:
+    ip: 35.208.49.41
+    loc: [7, 16, 10]
+  sivvaldezarza:
+    ip: 35.209.49.41
+    loc: [7, 17, 10]
+  sivmachado:
+    ip: 35.210.49.41
+    loc: [7, 18, 10]
+  sivpenagrande:
+    ip: 35.211.49.41
+    loc: [7, 19, 10]
+  sivilustracion:
+    ip: 35.212.49.41
+    loc: [7, 20, 10]
+  sivlacoma:
+    ip: 35.213.49.41
+    loc: [7, 21, 10]
+  sivpitis:
+    ip: 35.215.49.41
+    loc: [7, 23, 10]
+
+# LINEA 8
+  sivministerios8:
+    ip: 18.2.49.70
+    loc: [8, 1, 10]
+  sivcolombia8:
+    ip: 18.3.49.60
+    loc: [8, 2, 10]
+  sivpinardelrey:
+    ip: 18.8.49.10
+    loc: [8, 3, 10]
+  sivmarcristal:
+    ip: 18.4.49.67
+    loc: [8, 4, 10]
+  sivcnaciones:
+    ip: 18.5.49.61
+    loc: [8, 5, 10]
+  sivaeropuerto:
+    ip: 18.6.49.65
+    loc: [8, 6, 10]
+  sivbarajas:
+    ip: 18.7.49.61
+    loc: [8, 7, 10]
+  sivaeropuertoT4:
+    ip: 18.9.49.10
+    loc: [8, 8, 10]
+
+# LINEA 9
+  sivmirasierra:
+    ip: 18.87.49.8
+    loc: [9, 51, 10]
+  sivherreraoria:
+    ip: 18.65.49.41
+    loc: [9, 1, 10]
+  sivbarriopilar:
+    ip: 18.66.49.41
+    loc: [9, 2, 10]
+  sivventilla:
+    ip: 18.67.49.41
+    loc: [9, 3, 10]
+  sivcastilla:
+    ip: 18.68.49.41
+    loc: [9, 4, 10]
+  sivpastrana:
+    ip: 18.69.49.60
+    loc: [9, 5, 10]
+  sivpioxii:
+    ip: 18.70.49.41
+    loc: [9, 6, 10]
+  sivcolombia9:
+    ip: 18.3.49.62
+    loc: [9, 7, 10]
+  sivconchaespina:
+    ip: 18.72.49.41
+    loc: [9, 8, 10]
+  sivcruzrayo:
+    ip: 18.73.49.41
+    loc: [9, 9, 10]
+  sivavdaamerica9:
+    ip: 18.74.49.60
+    loc: [9, 10, 10]
+  sivnunezbalboa:
+    ip: 16.0.61.15
+    loc: [9, 11, 10]
+  sivppevergara:
+    ip: 18.76.49.41
+    loc: [9, 12, 10]
+  sivibiza:
+    ip: 36.77.49.41
+    loc: [9, 13, 10]
+  sivsainzbaranda9:
+    ip: 36.78.49.41
+    loc: [9, 14, 10]
+  sivestrella:
+    ip: 36.79.49.60
+    loc: [9, 15, 10]
+  sivvinateros:
+    ip: 36.80.49.60
+    loc: [9, 16, 10]
+  sivartilleros:
+    ip: 36.81.49.41
+    loc: [9, 17, 10]
+  sivpavones:
+    ip: 36.82.49.41
+    loc: [9, 18, 10]
+  sivvaldebernardo:
+    ip: 36.83.49.41
+    loc: [9, 19, 10]
+  sivvicalvaro:
+    ip: 36.84.49.41
+    loc: [9, 20, 10]
+  sivcipriano:
+    ip: 36.85.49.41
+    loc: [9, 21, 10]
+  sivparganda:
+    ip: 36.86.49.60
+    loc: [9, 22, 10]
+  sivrurbanizacion:
+    ip: 16.0.61.12
+    loc: [9, 24, 10]
+  sivrfutura:
+    ip: 37.68.49.10
+    loc: [9, 25, 10]
+  sivrvaciamadrid:
+    ip: 37.69.49.10
+    loc: [9, 26, 10]
+  sivlapoveda:
+    ip: 16.0.61.11
+    loc: [9, 27, 10]
+  sivargandarey:
+    ip: 37.71.49.10
+    loc: [9, 28, 10]
+
+# LINEA 10
+  sivhinfantasofia:
+    ip: 37.203.49.12
+    loc: [10, 61, 10]
+  sivrcatolicos:
+    ip: 37.202.49.12
+    loc: [10, 60, 10]
+  sivbaunatal:
+    ip: 37.201.49.12
+    loc: [10, 59, 10]
+  sivmanuelfalla:
+    ip: 37.200.49.12
+    loc: [10, 58, 10]
+  sivmvaldavia:
+    ip: 37.199.49.12
+    loc: [10, 57, 10]
+  sivlamoraleja:
+    ip: 37.198.49.12
+    loc: [10, 56, 10]
+  sivlagranja:
+    ip: 37.197.49.12
+    loc: [10, 55, 10]
+  sivrcomunicacion:
+    ip: 37.196.49.12
+    loc: [10, 54, 10]
+  sivlastablas:
+    ip: 37.195.49.12
+    loc: [10, 53, 10]
+  sivmontecarmelo:
+    ip: 37.194.49.12
+    loc: [10, 52, 10]
+  sivtresolivosn:
+    ip: 37.193.49.14
+    loc: [10, 51, 11]
+  sivtresolivos10:
+    ip: 37.193.49.8
+    loc: [10, 51, 10]
+  sivfuencarral:
+    ip: 18.129.49.61
+    loc: [10, 1, 10]
+  sivbegona:
+    ip: 18.130.49.61
+    loc: [10, 2, 10]
+  sivchamartin:
+    ip: 18.131.49.41
+    loc: [10, 3, 10]
+  sivcastilla10:
+    ip: 18.132.49.229
+    loc: [10, 4, 10]
+  sivcuzco:
+    ip: 18.133.49.62
+    loc: [10, 5, 10]
+  sivbernabeu:
+    ip: 18.134.49.61
+    loc: [10, 6, 10]
+  sivministerios10:
+    ip: 18.2.49.60
+    loc: [10, 7, 10]
+  sivmaranon10:
+    ip: 18.136.49.61
+    loc: [10, 8, 10]
+  sivamartinez10:
+    ip: 18.137.49.61
+    loc: [10, 9, 10]
+  sivtribunal10:
+    ip: 18.138.49.61
+    loc: [10, 10, 10]
+  sivplazaespana10:
+    ip: 18.139.49.225
+    loc: [10, 11, 10]
+  sivprincipepio10:
+    ip: 36.140.49.65
+    loc: [10, 12, 10]
+  sivlago:
+    ip: 36.141.49.61
+    loc: [10, 13, 10]
+  sivbatan:
+    ip: 36.142.49.61
+    loc: [10, 14, 10]
+  sivcasacampo:
+    ip: 36.143.49.64
+    loc: [10, 15, 10]
+  sivcoloniajardin:
+    ip: 36.144.49.9
+    loc: [10, 16, 10]
+  sivaviacion:
+    ip: 36.148.49.11
+    loc: [10, 18, 10]
+  sivcuatrovientos:
+    ip: 36.145.49.9
+    loc: [10, 19, 10]
+  sivvilumbrales:
+    ip: 36.146.49.9
+    loc: [10, 20, 10]
+  sivpuertasur:
+    ip: 36.147.49.12
+    loc: [10, 21, 10]
+
+# LINEA 11
+  siveliptica11:
+    ip: 18.193.49.70
+    loc: [11, 1, 10]
+  sivabrantes:
+    ip: 18.194.49.61
+    loc: [11, 2, 10]
+  sivpanbendito:
+    ip: 18.195.49.61
+    loc: [11, 3, 10]
+  sivsanfrancisco:
+    ip: 18.196.49.8
+    loc: [11, 4, 10]
+  sivcarabanchelalto:
+    ip: 18.197.49.8
+    loc: [11, 5, 10]
+  sivlapeseta:
+    ip: 18.198.49.8
+    loc: [11, 6, 10]
+  sivlafortuna:
+    ip: 18.199.49.8
+    loc: [11, 7, 10]
+
+#LINEA 12
+  sivpsur12:
+    ip: 16.2.61.19
+    loc: [12, 1, 10]
+  sivplisboa:
+    ip: 19.2.49.9
+    loc: [12, 2, 10]
+  sivalcorconcentral:
+    ip: 19.3.49.9
+    loc: [12, 3, 10]
+  sivparqueoeste:
+    ip: 19.4.49.9
+    loc: [12, 4, 10]
+  sivreyjuancarlos:
+    ip: 19.5.49.9
+    loc: [12, 5, 10]
+  sivmostolescentral:
+    ip: 19.6.49.10
+    loc: [12, 6, 10]
+  sivpradillo:
+    ip: 19.7.49.10
+    loc: [12, 7, 10]
+  sivhmostoles:
+    ip: 19.8.49.9
+    loc: [12, 8, 10]
+  sivmanuela:
+    ip: 19.9.49.9
+    loc: [12, 9, 10]
+  sivloranca:
+    ip: 37.10.49.9
+    loc: [12, 10, 10]
+  sivhfuenlabrada:
+    ip: 37.12.49.9
+    loc: [12, 12, 10]
+  sivpeuropa:
+    ip: 37.13.49.9
+    loc: [12, 13, 10]
+  sivfuenlacentral:
+    ip: 37.14.49.9
+    loc: [12, 14, 10]
+  sivparquestados:
+    ip: 37.15.49.9
+    loc: [12, 15, 10]
+  sivaculebro:
+    ip: 37.17.49.10
+    loc: [12, 17, 10]
+  sivconservatorio:
+    ip: 37.18.49.9
+    loc: [12, 18, 10]
+  sivamendoza:
+    ip: 37.19.49.9
+    loc: [12, 19, 10]
+  sivgetafecentral:
+    ip: 37.20.49.9
+    loc: [12, 20, 10]
+  sivjcierva:
+    ip: 37.21.49.9
+    loc: [12, 21, 10]
+  sivelcasar:
+    ip: 37.22.49.9
+    loc: [12, 22, 10]
+  sivespartales:
+    ip: 37.23.49.11
+    loc: [12, 23, 10]
+  sivbercial:
+    ip: 37.24.49.10
+    loc: [12, 24, 10]
+  sivcarrascal:
+    ip: 37.25.49.9
+    loc: [12, 25, 10]
+  sivjbesteiro:
+    ip: 37.26.49.9
+    loc: [12, 26, 10]
+  sivcasareloj:
+    ip: 19.27.49.9
+    loc: [12, 27, 10]
+  sivhsevero:
+    ip: 19.28.49.10
+    loc: [12, 28, 10]
+  sivleganescentral:
+    ip: 19.29.49.9
+    loc: [12, 29, 10]
+  sivsnicasio:
+    ip: 19.30.49.10
+    loc: [12, 30, 10]
+
+# LINEA RAMAL
+  sivoperaR:
+    ip: 16.137.49.11
+    loc: [50, 1, 10]
+  sivppepioR:
+    ip: 36.140.49.8
+    loc: [50, 2, 10]
+
+# LINEA ML1
+  sivfuentemora:
+    ip: 12.66.49.10
+    loc: [51, 12, 10]
+  sivblascoibanez:
+    ip: 12.70.49.10
+    loc: [51, 16, 10]
+  sivmariatudor:
+    ip: 12.71.49.10
+    loc: [51, 17, 10]
+
+tce_hosts:
+  pinarchamartin:
+    ip: 16.97.58.61
+    loc: [1, 53, 1]
+  bambu:
+    ip: 16.96.58.60
+    loc: [1, 52, 1]
+  chamartin:
+    ip: 18.131.58.42
+    loc: [10, 3, 1]
+  castilla:
+    ip: 18.132.58.44
+    loc: [1, 1, 1]
+  valdeacederas:
+    ip: 16.66.58.60
+    loc: [1, 2, 1]
+  tetuan:
+    ip: 16.67.58.61
+    loc: [1, 3, 1]
+  estrecho:
+    ip: 16.68.58.60
+    loc: [1, 4, 1]
+  alvarado:
+    ip: 16.69.58.60
+    loc: [1, 5, 1]
+  ccaminos:
+    ip: 16.143.58.41
+    loc: [1, 6, 1]
+  riosrosas:
+    ip: 16.71.58.60
+    loc: [1, 7, 1]
+  iglesia:
+    ip: 16.72.58.72
+    loc: [1, 8, 1]
+  bilbao:
+    ip: 17.3.58.68
+    loc: [1, 9, 1]
+  tribunal:
+    ip: 18.138.58.66
+    loc: [1, 10, 1]
+  granvia:
+    ip: 17.78.58.60
+    loc: [1, 11, 1]
+  sol:
+    ip: 16.198.58.50
+    loc: [1, 12, 1]
+  tirsomolina:
+    ip: 19.77.58.67
+    loc: [1, 13, 1]
+  antonmartin:
+    ip: 19.78.58.66
+    loc: [1, 14, 1]
+  atocha:
+    ip: 19.79.58.66
+    loc: [1, 15, 1]
+  atocharenfe:
+    ip: 19.80.58.69
+    loc: [1, 16, 1]
+  pelayo:
+    ip: 19.81.58.66
+    loc: [1, 17, 1]
+  pacifico:
+    ip: 17.138.58.66
+    loc: [1, 18, 1]
+  puentevallecas:
+    ip: 19.83.58.65
+    loc: [1, 19, 1]
+  numancia:
+    ip: 20.84.58.60
+    loc: [1, 20, 1]
+  portazgo:
+    ip: 20.85.58.61
+    loc: [1, 21, 1]
+  buenosaires:
+    ip: 20.86.58.63
+    loc: [1, 22, 1]
+  altoarenal:
+    ip: 20.87.58.62
+    loc: [1, 23, 1]
+  miguelhdez:
+    ip: 20.88.58.62
+    loc: [1, 24, 1]
+  guadalupe:
+    ip: 20.89.58.61
+    loc: [1, 25, 1]
+  vvallecas:
+    ip: 20.90.58.61
+    loc: [1, 26, 1]
+  congosto:
+    ip: 20.91.58.61
+    loc: [1, 27, 1]
+  lagavia:
+    ip: 20.92.58.64
+    loc: [1, 28, 1]
+  lassuertes:
+    ip: 20.93.58.65
+    loc: [1, 29, 1]
+  valdecarros:
+    ip: 20.94.58.72
+    loc: [1, 30, 1]
+  lasrosas:
+    ip: 20.148.58.12
+    loc: [2, 55, 1]
+  guadalajara:
+    ip: 20.147.58.12
+    loc: [2, 54, 1]
+  alsacia:
+    ip: 20.146.58.12
+    loc: [2, 53, 1]
+  almudena:
+    ip: 20.145.58.12
+    loc: [2, 52, 1]
+  laelipa:
+    ip: 16.144.58.8
+    loc: [2, 51, 1]
+  ventas:
+    ip: 16.129.58.41
+    loc: [2, 1, 1]
+  mbecerra:
+    ip: 16.130.58.41
+    loc: [2, 2, 1]
+  goya:
+    ip: 16.131.58.41
+    loc: [2, 3, 1]
+  ppevergara:
+    ip: 18.76.58.41
+    loc: [2, 4, 1]
+  retiro:
+    ip: 16.133.58.41
+    loc: [2, 5, 1]
+  bancoespana:
+    ip: 16.134.58.41
+    loc: [2, 6, 1]
+  sevilla:
+    ip: 16.135.58.41
+    loc: [2, 7, 1]
+  opera:
+    ip: 16.137.58.41
+    loc: [2, 9, 1]
+  santodomingo:
+    ip: 16.138.58.41
+    loc: [2, 10, 1]
+  noviciado:
+    ip: 16.139.58.42
+    loc: [2, 11, 1]
+  sanbernardo:
+    ip: 16.140.58.41
+    loc: [2, 12, 1]
+  quevedo:
+    ip: 16.141.58.41
+    loc: [2, 13, 1]
+  canal:
+    ip: 16.142.58.41
+    loc: [2, 14, 1]
+  moncloa:
+    ip: 16.203.58.43
+    loc: [3, 11, 1]
+  arguelles:
+    ip: 16.202.58.41
+    loc: [3, 10, 1]
+  ventura:
+    ip: 16.201.58.41
+    loc: [3, 9, 1]
+  pzaespana:
+    ip: 18.139.58.41
+    loc: [3, 8, 1]
+  callao:
+    ip: 16.199.58.41
+    loc: [3, 7, 1]
+  lavapies:
+    ip: 16.197.58.41
+    loc: [3, 5, 1]
+  embajadores:
+    ip: 16.196.58.41
+    loc: [3, 4, 1]
+  palosfrontera:
+    ip: 16.195.58.44
+    loc: [3, 3, 1]
+  delicias:
+    ip: 16.194.58.41
+    loc: [3, 2, 1]
+  legazpi:
+    ip: 16.193.58.41
+    loc: [3, 1, 1]
+  almendrales:
+    ip: 20.204.58.9
+    loc: [3, 51, 1]
+  doceoctubre:
+    ip: 20.205.58.9
+    loc: [3, 52, 1]
+  sanfermin:
+    ip: 20.206.58.9
+    loc: [3, 53, 1]
+  ciudadangeles:
+    ip: 20.207.58.9
+    loc: [3, 54, 1]
+  villaverdecruce:
+    ip: 20.208.58.9
+    loc: [3, 55, 1]
+  sancristobal:
+    ip: 20.209.58.9
+    loc: [3, 56, 1]
+  villaverdealto:
+    ip: 20.210.58.9
+    loc: [3, 57, 1]
+  manoteras:
+    ip: 35.22.58.60
+    loc: [4, 22, 1]
+  hortaleza:
+    ip: 35.21.58.60
+    loc: [4, 21, 1]
+  psmaria:
+    ip: 35.20.58.62
+    loc: [4, 20, 1]
+  sanlorenzo:
+    ip: 35.19.58.62
+    loc: [4, 19, 1]
+  marcristal:
+    ip: 18.4.58.61
+    loc: [4, 18, 1]
+  canillas:
+    ip: 35.17.58.62
+    loc: [4, 17, 1]
+  esperanza:
+    ip: 35.16.58.61
+    loc: [4, 16, 1]
+  arturosoria:
+    ip: 35.15.58.62
+    loc: [4, 15, 1]
+  avdapaz:
+    ip: 35.14.58.62
+    loc: [4, 14, 1]
+  alfonsoxiii:
+    ip: 35.13.58.61
+    loc: [4, 13, 1]
+  prosperidad:
+    ip: 35.12.58.61
+    loc: [4, 12, 1]
+  avdaamerica4:
+    ip: 18.74.58.63
+    loc: [4, 11, 1]
+  diegoleon4:
+    ip: 17.73.58.41
+    loc: [4, 10, 1]
+  lista:
+    ip: 17.9.58.61
+    loc: [4, 9, 1]
+  velazquez:
+    ip: 17.7.58.61
+    loc: [4, 7, 1]
+  serrano:
+    ip: 17.6.58.62
+    loc: [4, 6, 1]
+  colon:
+    ip: 17.5.58.61
+    loc: [4, 5, 1]
+  alonsomartinez:
+    ip: 18.137.58.63
+    loc: [4, 4, 1]
+  alamedaosuna:
+    ip: 17.96.58.9
+    loc: [5, 52, 1]
+  elcapricho:
+    ip: 17.95.58.8
+    loc: [5, 51, 1]
+  canillejas:
+    ip: 17.65.58.43
+    loc: [5, 1, 1]
+  torrearias:
+    ip: 17.66.58.41
+    loc: [5, 2, 1]
+  suanzes:
+    ip: 17.67.58.61
+    loc: [5, 3, 1]
+  ciudadlineal:
+    ip: 17.68.58.41
+    loc: [5, 4, 1]
+  pueblonuevo:
+    ip: 17.69.58.229
+    loc: [5, 5, 1]
+  quintana:
+    ip: 17.70.58.60
+    loc: [5, 6, 1]
+  elcarmen:
+    ip: 17.71.58.41
+    loc: [5, 7, 1]
+  diegoleon5:
+    ip: 17.73.58.42 
+    loc: [5, 9, 1]
+  nunezbalboa:
+    ip: 18.75.58.60
+    loc: [5, 10, 1]
+  rubendario:
+    ip: 17.75.58.42
+    loc: [5, 11, 1]
+  chueca:
+    ip: 17.77.58.41
+    loc: [5, 13, 1]
+  lalatina:
+    ip: 35.81.58.41
+    loc: [5, 17, 1]
+  ptatoledo:
+    ip: 35.82.58.41
+    loc: [5, 18, 1]
+  acacias:
+    ip: 35.83.58.61
+    loc: [5, 19, 1]
+  piramides:
+    ip: 35.84.58.42
+    loc: [5, 20, 1]
+  marquesvadillo:
+    ip: 35.85.58.41
+    loc: [5, 21, 1]
+  urgel:
+    ip: 35.86.58.41
+    loc: [5, 22, 1]
+  oporto:
+    ip: 35.87.58.61
+    loc: [5, 23, 1]
+  vistaalegre:
+    ip: 35.88.58.41
+    loc: [5, 24, 1]
+  carabanchel:
+    ip: 35.89.58.60
+    loc: [5, 25, 1]
+  emontijo:
+    ip: 35.90.58.41
+    loc: [5, 26, 1]
+  aluche:
+    ip: 35.91.58.60
+    loc: [5, 27, 1]
+  empalme:
+    ip: 35.92.58.60
+    loc: [5, 28, 1]
+  campamento:
+    ip: 35.93.58.41
+    loc: [5, 29, 1]
+  casacampo:
+    ip: 36.143.58.60
+    loc: [5, 30, 1]
+  laguna:
+    ip: 17.129.58.61
+    loc: [6, 1, 1]
+  carpetana:
+    ip: 17.130.58.60
+    loc: [6, 2, 1]
+  opanel:
+    ip: 17.132.58.61
+    loc: [6, 4, 1]
+  usera:
+    ip: 17.134.58.60
+    loc: [6, 6, 1]
+  arganzuela:
+    ip: 17.136.58.63
+    loc: [6, 8, 1]
+  mendez:
+    ip: 17.137.58.60
+    loc: [6, 9, 1]
+  condecasal:
+    ip: 35.139.58.65
+    loc: [6, 11, 1]
+  sainzbaranda:
+    ip: 36.78.58.41
+    loc: [6, 12, 1]
+  odonnell:
+    ip: 35.141.58.63
+    loc: [6, 13, 1]
+  argentina:
+    ip: 35.145.58.60
+    loc: [6, 17, 1]
+  ministerios6:
+    ip: 18.2.58.86 
+    loc: [6, 18, 1]
+  guzmanbueno:
+    ip: 35.207.58.41
+    loc: [6, 20, 1]
+  metropolitano:
+    ip: 35.149.58.60
+    loc: [6, 21, 1]
+  universitaria:
+    ip: 35.150.58.60
+    loc: [6, 22, 1]
+  principepio:
+    ip: 36.140.58.62
+    loc: [6, 25, 1]
+  puertaangel:
+    ip: 17.154.58.60
+    loc: [6, 26, 1]
+  extremadura:
+    ip: 17.155.58.62
+    loc: [6, 27, 1]
+  lucero:
+    ip: 17.156.58.60
+    loc: [6, 28, 1]
+  hospitalhenares:
+    ip: 37.138.58.8
+    loc: [7, 60, 1]
+  henares:
+    ip: 37.137.58.8
+    loc: [7, 59, 1]
+  jarama:
+    ip: 37.136.58.8
+    loc: [7, 58, 1]
+  sanfernando:
+    ip: 37.135.58.8
+    loc: [7, 57, 1]
+  larambla:
+    ip: 37.134.58.8
+    loc: [7, 56, 1]
+  coslada:
+    ip: 37.133.58.8
+    loc: [7, 55, 1]
+  barriopuerto:
+    ip: 37.132.58.8
+    loc: [7, 54, 1]
+  estadioolimpico:
+    ip: 37.129.58.8
+    loc: [7, 51, 1]
+  lasmusas:
+    ip: 17.193.58.41
+    loc: [7, 1, 1]
+  sanblas:
+    ip: 17.194.58.41
+    loc: [7, 2, 1]
+  simancas:
+    ip: 17.195.58.41
+    loc: [7, 3, 1]
+  gnoblejas:
+    ip: 17.196.58.41
+    loc: [7, 4, 1]
+  ascao:
+    ip: 17.197.58.41
+    loc: [7, 5, 1]
+  bconcepcion:
+    ip: 17.199.58.41
+    loc: [7, 7, 1]
+  pavenidas:
+    ip: 17.200.58.41
+    loc: [7, 8, 1]
+  cartagena:
+    ip: 17.201.58.41
+    loc: [7, 9, 1]
+  avdaamerica7:
+    ip: 18.74.58.61
+    loc: [7, 10, 1]
+  alonsocano:
+    ip: 17.204.58.41
+    loc: [7, 12, 1]
+  filipinas:
+    ip: 35.206.58.42
+    loc: [7, 14, 1]
+  frodriguez:
+    ip: 35.208.58.41
+    loc: [7, 16, 1]
+  valdezarza:
+    ip: 35.209.58.42
+    loc: [7, 17, 1]
+  machado:
+    ip: 35.210.58.41
+    loc: [7, 18, 1]
+  penagrande:
+    ip: 35.211.58.41
+    loc: [7, 19, 1]
+  ilustracion:
+    ip: 35.212.58.41
+    loc: [7, 20, 1]
+  lacoma:
+    ip: 35.213.58.41
+    loc: [7, 21, 1]
+  pitis:
+    ip: 35.215.58.41
+    loc: [7, 23, 1]
+  pinardelrey:
+    ip: 18.8.58.9
+    loc: [8, 3, 1]
+  cnaciones:
+    ip: 18.5.58.61
+    loc: [8, 5, 1]
+  aeropuerto:
+    ip: 18.6.58.61
+    loc: [8, 6, 1]
+  barajas:
+    ip: 18.7.58.63
+    loc: [8, 7, 1]
+  aeropuertot4:
+    ip: 18.9.58.10
+    loc: [8, 8, 1]
+  mirasierra:
+    ip: 18.87.58.12
+    loc: [9, 51, 1]
+  herreraoria:
+    ip: 18.65.58.41
+    loc: [9, 1, 1]
+  barriopilar:
+    ip: 18.66.58.42
+    loc: [9, 2, 1]
+  ventilla:
+    ip: 18.67.58.41
+    loc: [9, 3, 1]
+  pastrana:
+    ip: 18.69.58.41
+    loc: [9, 5, 1]
+  pioxii:
+    ip: 18.70.58.42
+    loc: [9, 6, 1]
+  colombia:
+    ip: 18.3.58.60
+    loc: [8, 2, 1]
+  conchaespina:
+    ip: 18.72.58.41
+    loc: [9, 8, 1]
+  cruzrayo:
+    ip: 18.73.58.41
+    loc: [9, 9, 1]
+  ibiza:
+    ip: 36.77.58.41
+    loc: [9, 13, 1]
+  estrella:
+    ip: 36.79.58.63
+    loc: [9, 15, 1]
+  vinateros:
+    ip: 36.80.58.60
+    loc: [9, 16, 1]
+  artilleros:
+    ip: 36.81.58.41
+    loc: [9, 17, 1]
+  pavones:
+    ip: 36.82.58.42
+    loc: [9, 18, 1]
+  valdebernardo:
+    ip: 36.83.58.42
+    loc: [9, 19, 1]
+  vicalvaro:
+    ip: 36.84.58.41
+    loc: [9, 20, 1]
+  cipriano:
+    ip: 36.85.58.41
+    loc: [9, 21, 1]
+  parganda:
+    ip: 36.86.58.41
+    loc: [9, 22, 1]
+  rurbanizacion:
+    ip: 37.67.58.10
+    loc: [9, 24, 1]
+  rivasfutura:
+    ip: 37.68.58.10
+    loc: [9, 25, 1]
+  rvaciamadrid:
+    ip: 37.69.58.10
+    loc: [9, 26, 1]
+  lapoveda:
+    ip: 37.70.58.10
+    loc: [9, 27, 1]
+  argandarey:
+    ip: 37.71.58.10
+    loc: [9, 28, 1]
+  hinfantasofia:
+    ip: 37.203.58.10
+    loc: [10, 61, 1]
+  reyescatolicos:
+    ip: 37.202.58.10
+    loc: [10, 60, 1]
+  baunatal:
+    ip: 37.201.58.10
+    loc: [10, 59, 1]
+  manuelfalla:
+    ip: 37.200.58.10
+    loc: [10, 58, 1]
+  marquesvaldavia:
+    ip: 37.199.58.10
+    loc: [10, 57, 1]
+  lamoraleja:
+    ip: 37.198.58.10
+    loc: [10, 56, 1]
+  lagranja:
+    ip: 37.197.58.10
+    loc: [10, 55, 1]
+  ccomunicaciones:
+    ip: 37.196.58.10
+    loc: [10, 54, 1]
+  lastablas:
+    ip: 37.195.58.10
+    loc: [10, 53, 1]
+  montecarmelo:
+    ip: 37.194.58.10
+    loc: [10, 52, 1]
+  tresolivos:
+    ip: 37.193.58.8
+    loc: [10, 51, 1]
+  fuencarral:
+    ip: 18.129.58.62
+    loc: [10, 1, 1]
+  begonia:
+    ip: 18.130.58.63
+    loc: [10, 2, 1]
+  cuzco:
+    ip: 18.133.58.60
+    loc: [10, 5, 1]
+  bernabeu:
+    ip: 18.134.58.60
+    loc: [10, 6, 1]
+  ministerios:
+    ip: 18.2.58.62
+    loc: [8, 1, 1]
+  maranon:
+    ip: 18.136.58.61
+    loc: [7, 11, 1]
+  lago:
+    ip: 36.141.58.60
+    loc: [10, 13, 1]
+  batan:
+    ip: 36.142.58.62
+    loc: [10, 14, 1]
+  cjardin:
+    ip: 36.144.58.18
+    loc: [10, 16, 1]
+  aviacion:
+    ip: 36.148.58.8
+    loc: [10, 18, 1]
+  cuatrovientos:
+    ip: 36.145.58.9
+    loc: [10, 19, 1]
+  vilumbrales:
+    ip: 36.146.58.8
+    loc: [10, 20, 1]
+  puertasur:
+    ip: 36.147.58.12
+    loc: [10, 21, 1]
+  eliptica:
+    ip: 18.193.58.62
+    loc: [6, 5, 1]
+  abrantes:
+    ip: 18.194.58.60
+    loc: [11, 2, 1]
+  panbendito:
+    ip: 18.195.58.60
+    loc: [11, 3, 1]
+  sanfrancisco:
+    ip: 18.196.58.9
+    loc: [11, 4, 1]
+  carabanchelalto:
+    ip: 18.197.58.9
+    loc: [11, 5, 1]
+  lapeseta:
+    ip: 18.198.58.9
+    loc: [11, 6, 1]
+  lafortuna:
+    ip: 18.199.58.12
+    loc: [11, 7, 1]
+  plisboa:
+    ip: 19.2.58.10
+    loc: [12, 2, 1]
+  alcorcon:
+    ip: 19.3.58.9
+    loc: [12, 3, 1]
+  poeste:
+    ip: 19.4.58.9
+    loc: [12, 4, 1]
+  urjcarlos:
+    ip: 19.5.58.9
+    loc: [12, 5, 1]
+  mostoles:
+    ip: 19.6.58.9
+    loc: [12, 6, 1]
+  pradillo:
+    ip: 19.7.58.8
+    loc: [12, 7, 1]
+  hmostoles:
+    ip: 19.8.58.9
+    loc: [12, 8, 1]
+  malasania:
+    ip: 19.9.58.9
+    loc: [12, 9, 1]
+  loranca:
+    ip: 37.10.58.11
+    loc: [12, 10, 1]
+  hfuenlabrada:
+    ip: 37.12.58.10
+    loc: [12, 12, 1]
+  peuropa:
+    ip: 37.13.58.9
+    loc: [12, 13, 1]
+  fuenlabrada:
+    ip: 37.14.58.9
+    loc: [12, 14, 1]
+  pestados:
+    ip: 37.15.58.10
+    loc: [12, 15, 1]
+  culebro:
+    ip: 37.17.58.10
+    loc: [12, 17, 1]
+  conservatorio:
+    ip: 37.18.58.8
+    loc: [12, 18, 1]
+  amendoza:
+    ip: 37.19.58.9
+    loc: [12, 19, 1]
+  getafe:
+    ip: 37.20.58.9
+    loc: [12, 20, 1]
+  jdelacierva:
+    ip: 37.21.58.10
+    loc: [12, 21, 1]
+  elcasar:
+    ip: 37.22.58.9
+    loc: [12, 22, 1]
+  espartales:
+    ip: 37.23.58.12
+    loc: [12, 23, 1]
+  bercial:
+    ip: 37.24.58.10
+    loc: [12, 24, 1]
+  carrascal:
+    ip: 37.25.58.10
+    loc: [12, 25, 1]
+  jbesteiro:
+    ip: 37.26.58.8
+    loc: [12, 26, 1]
+  casareloj:
+    ip: 19.27.58.9
+    loc: [12, 27, 1]
+  hseverochoa:
+    ip: 19.28.58.8
+    loc: [12, 28, 1]
+  leganes:
+    ip: 19.29.58.8
+    loc: [12, 29, 1]
+  snicasio:
+    ip: 19.30.58.11
+    loc: [12, 30, 1]
+  blascoibanez:
+    ip: 12.70.58.10
+    loc: [51, 16, 1]
+  fuentemora:
+    ip: 12.66.58.10
+    loc: [51, 12, 1]
