@@ -3,7 +3,10 @@ class profile::base {
   include ::motd
   include ::vim
   include ::xinetd
-  include ::dnsclient
+
+  class {'dnsclient':
+    nameservers => hiera('dnsclient::nameservers'),
+  }
 
   class {'profile::setup':
     stage => 'setup',
@@ -56,6 +59,11 @@ class profile::base {
   }
 
   class {'::snmp':
+    agentaddress      => hiera('snmp::agentaddress'),
+    views             => hiera('snmp::views'),
+    com2sec           => hiera('snmp::com2sec'),
+    snmpd_config      => hiera('snmp::snmpd_config'),
+    service_hasstatus => hiera('snmp::service_hasstatus'),
   }
 
   class {'::ntp':
