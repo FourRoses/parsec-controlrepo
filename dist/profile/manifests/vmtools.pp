@@ -18,14 +18,12 @@ class profile::vmtools {
 
 
   if $vmtools_mode == 'vmwaretools' {
-    #class { '::vmwaretools':
-    #  reposerver            => 'http://16.0.96.20:3142/',
-    #  repopath              => 'packages.vmware.com/tools',
-    #  just_prepend_repopath => true,
-    #  tools_version         => "${::vmware}latest",
-    #  autoupgrade           => true,
-    #}
-    include ::vmwaretools
+    class { 'vmwaretools':
+      version     => '9.0.10-1481436',
+      working_dir => '/tmp/vmwaretools',
+      archive_url => 'http://16.0.96.20/repo/vmwaretools',
+      archive_md5 => '0a11d80baf58a1bd4df2e2a8c5b32a24',
+    }
   }
   if $vmtools_mode == 'openvmtools' {
     include ::openvmtools
