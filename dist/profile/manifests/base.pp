@@ -17,7 +17,35 @@ class profile::base {
       purge_sources_list_d => true,
       purge_preferences_d  => true,
     }
-    include ::repos::siv
+
+    apt::source {'ubuntu':
+      location => 'http://16.0.96.20:3142/archive.ubuntu.com/ubuntu',
+      repos    => 'main restricted universe multiverse',
+    }
+    apt::source {'ubuntu-security':
+      location => 'http://16.0.96.20:3142/archive.ubuntu.com/ubuntu',
+      repos    => 'main restricted universe multiverse',
+      releases => '${lsbdistcodename}-security',
+    }
+    apt::source {'ubuntu-updates':
+      location => 'http://16.0.96.20:3142/archive.ubuntu.com/ubuntu',
+      repos    => 'main restricted universe multiverse',
+      releases => '${lsbdistcodename}-updates',
+    }
+    apt::source {'ubuntu-backports':
+      location => 'http://16.0.96.20:3142/archive.ubuntu.com/ubuntu',
+      repos    => 'main restricted universe multiverse',
+      release  => "${lsbdistcodename}-backports",
+    }
+    apt::key {'puppetlabs':
+      ensure     => present,
+      key        => '0x4BD6EC30',
+      key_source => 'http://16.0.96.20/repo/puppet/pubkey.gpg',
+    }
+    apt::source {'puppetlabs':
+      location => 'http://16.0.96.20:3142/apt.puppetlabs.com',
+      repos    => 'main dependencies',
+    }
   }
 
   class {'::puppet':
