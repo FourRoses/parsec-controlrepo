@@ -11,6 +11,6 @@ class profile::sivestacion {
   network::interface { $::foreman_interfaces[0][identifier]:
     ipaddress => $::foreman_interfaces[0][ip],
     netmask   => $::foreman_interfaces[0][attrs][netmask],
-    gateway   => regsubst($::foreman_interfaces[0][ip], '^(\d+\.\d+\.\d+\)\d+$', '\1.1')
+    gateway   => regsubst($::foreman_interfaces[0][ip], '^(\d+\.\d+\.\d+)\.\d+$', '\1.1')
   }
 }
