@@ -1,14 +1,12 @@
 class profile::sivestacion {
-  class {'::csh': } ->
-  class {'::user::siv': } ->
-  class {'::dkms': } ->
-  class {'::metro::siv::estacion': } ->
-  class {'::rlogin': } ->
-  Class ['::profile::sivestacion']
+  #class {'::user::siv': } ->
+  #class {'::dkms': } ->
+  #class {'::metro::siv::estacion': } ->
+  #class {'::rlogin': } ->
+  #Class ['::profile::sivestacion']
 
-  package {['libncurses5-dev','libssl-dev','libssl0.9.8']:
-    ensure => installed,
-  }
+  package {['libncurses5-dev','libssl-dev','libssl0.9.8']: }
+  package {'tcsh': }
 
   network_config { $::foreman_interfaces[0][identifier]:
     ensure    => 'present',
