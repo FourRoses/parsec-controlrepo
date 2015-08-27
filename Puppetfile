@@ -2,8 +2,6 @@ forge "http://forge.puppetlabs.com"
 
 # Modules from the Puppet Forge
 mod "adrien/alternatives", "0.3.0"
-mod "adrien/boolean", "1.0.1"
-mod "adrien/filemapper", "1.1.3"
 mod "darin/zypprepo", "1.0.2"
 mod "ghoneycutt/dnsclient", "3.4.0"
 mod "ghoneycutt-vim", "2.10.0"
@@ -16,7 +14,7 @@ mod "puppetlabs/ntp", "4.1.0"
 mod "puppetlabs/postgresql", "4.5.0"
 mod "puppetlabs/stdlib", "4.7.0"
 mod "puppetlabs/xinetd", "1.5.0"
-#mod "razorsedge/network", "3.5.0"
+mod "razorsedge/network", "3.5.0"
 mod "razorsedge/openvmtools", "1.0.0"
 mod "razorsedge/snmp", "3.4.0"
 mod "razorsedge/vmwaretools", "5.0.1"
@@ -27,5 +25,8 @@ mod "theforeman/tftp", "1.5.1"
 mod "thias/samba", "0.1.5"
 mod "wolfspyre/vmware_puppetfact", "0.2.2"
 
-mod 'network',
-  :git => 'https://github.com/puppet-community/puppet-network.git'
+# Commented out because issue #77, back to razorsedge/network
+#mod 'network',
+#  :git => 'https://github.com/puppet-community/puppet-network.git'
+#mod "adrien/boolean", "1.0.1"
+#mod "adrien/filemapper", "1.1.3"
