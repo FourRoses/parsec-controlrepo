@@ -46,7 +46,8 @@ class profile::base {
     }
     apt::key {'puppetlabs':
       ensure     => present,
-      key        => '0x4BD6EC30',
+    #  key        => '0x4BD6EC30',
+      key        => '36E47E1CC4DCC5E8152D115CC0B5E0AB66FD4949',
       key_source => 'http://16.0.96.20/repo/puppet/pubkey.gpg',
     }
     apt::source {'puppetlabs':
