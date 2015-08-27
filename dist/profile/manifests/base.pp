@@ -24,21 +24,25 @@ class profile::base {
     apt::source {'ubuntu':
       location => 'http://16.0.96.20:3142/archive.ubuntu.com/ubuntu',
       repos    => 'main restricted universe multiverse',
+      include_src => false,
     }
     apt::source {'ubuntu-security':
       location => 'http://16.0.96.20:3142/archive.ubuntu.com/ubuntu',
       repos    => 'main restricted universe multiverse',
       release  => "${lsbdistcodename}-security",
+      include_src => false,
     }
     apt::source {'ubuntu-updates':
       location => 'http://16.0.96.20:3142/archive.ubuntu.com/ubuntu',
       repos    => 'main restricted universe multiverse',
       release  => "${lsbdistcodename}-updates",
+      include_src => false,
     }
     apt::source {'ubuntu-backports':
       location => 'http://16.0.96.20:3142/archive.ubuntu.com/ubuntu',
       repos    => 'main restricted universe multiverse',
       release  => "${lsbdistcodename}-backports",
+      include_src => false,
     }
     apt::key {'puppetlabs':
       ensure     => present,
@@ -48,6 +52,7 @@ class profile::base {
     apt::source {'puppetlabs':
       location => 'http://16.0.96.20:3142/apt.puppetlabs.com',
       repos    => 'main dependencies',
+      include_src => false,
     }
   }
 
