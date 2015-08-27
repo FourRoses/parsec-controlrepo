@@ -1,2 +1,9 @@
 ---
 ntp::params::servers : [ '150.100.104.3', '152.100.104.3' ]
+
+dnsclient::nameservers : [ '16.0.96.16', '16.2.96.16' ]
+
+snmp::agentaddress : ['udp:0.0.0.0:161']
+snmp::com2sec      : ['notConfigUser  16.0.74.0/24    M0nS1st09']
+snmp::views        : ['systemview    included   .1']
+
