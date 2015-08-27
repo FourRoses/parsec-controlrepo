@@ -28,4 +28,4 @@ mod "thias/samba", "0.1.5"
 mod "wolfspyre/vmware_puppetfact", "0.2.2"
 
 mod 'network',
-  :git => 'https://github.com/puppet-community/puppet-network.git'
+  :git => 'https://github.com/juaningan/puppet-network.git' #forked to solve Issue #77
