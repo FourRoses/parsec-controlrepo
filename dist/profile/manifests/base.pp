@@ -25,12 +25,12 @@ class profile::base {
     apt::source {'ubuntu-security':
       location => 'http://16.0.96.20:3142/archive.ubuntu.com/ubuntu',
       repos    => 'main restricted universe multiverse',
-      releases => '${lsbdistcodename}-security',
+      releases => "${lsbdistcodename}-security",
     }
     apt::source {'ubuntu-updates':
       location => 'http://16.0.96.20:3142/archive.ubuntu.com/ubuntu',
       repos    => 'main restricted universe multiverse',
-      releases => '${lsbdistcodename}-updates',
+      releases => "${lsbdistcodename}-updates",
     }
     apt::source {'ubuntu-backports':
       location => 'http://16.0.96.20:3142/archive.ubuntu.com/ubuntu',
