@@ -1,5 +1,4 @@
 class profile::sivestacion {
-  #class {'::dkms': } ->
   #class {'::metro::siv::estacion': } ->
 
   package {['libncurses5-dev','libssl-dev','libssl0.9.8']: } # for dgrp compatibility
@@ -44,5 +43,8 @@ class profile::sivestacion {
     ensure => present,
     gid    => '503',
   }
+
+  package { ['build-essential', "linux-headers-${::kernelrelease}"]: }
+  package { 'dkms': }
 
 }
