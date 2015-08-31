@@ -142,17 +142,17 @@ class profile::tce_estacion {
     line   => 'gdm-autologin auth  sufficient  pam_allow.so.1',
   }
 
-  file { '/home/metro':
-    ensure       => directory,
-    owner        => 'metro',
-    group        => 'nobody',
-    sourceselect => all,
-    source       => ["puppet:///data/tce_estacion/nodes/${::hostname}/home/metro",
-                     'puppet:///data/tce_estacion/common/home_metro'],
-    recurse      => remote,
-    replace      => false,
-    require      => File_line['auto_home'],
-  }
+#  file { '/home/metro':
+#    ensure       => directory,
+#    owner        => 'metro',
+#    group        => 'nobody',
+#    sourceselect => all,
+#    source       => ["puppet:///data/tce_estacion/nodes/${::hostname}/home/metro",
+#                     'puppet:///data/tce_estacion/common/home_metro'],
+#    recurse      => remote,
+#    replace      => false,
+#    require      => File_line['auto_home'],
+#  }
   file { '/home/metro/.cshrc':
     ensure => file,
     owner  => 'metro',
@@ -214,14 +214,14 @@ class profile::tce_estacion {
     target => '/home/metro/sistema/V',
   }
 
-  file { '/etc/inet':
-    ensure => directory,
-    owner  => 'root',
-    group  => 'root',
-    source => "puppet:///data/tce_estacion/nodes/${::hostname}/etc/inet",
-    recurse => remote,
-    mode    => '0444',
-  }
+#  file { '/etc/inet':
+#    ensure => directory,
+#    owner  => 'root',
+#    group  => 'root',
+#    source => "puppet:///data/tce_estacion/nodes/${::hostname}/etc/inet",
+#    recurse => remote,
+#    mode    => '0444',
+#  }
   file { '/usr/lib':
     ensure => directory,
     owner  => 'root',
@@ -317,13 +317,13 @@ class profile::tce_estacion {
     owner  => 'metro',
     group  => 'nobody',
   }
-  file { '/usr/local/tce/tce':
-    ensure  => file,
-    owner   => 'metro',
-    group   => 'nobody',
-    source  => "puppet:///data/tce_estacion/nodes/${::hostname}/usr/local/tce/tce",
-    replace => false,
-  }
+#  file { '/usr/local/tce/tce':
+#    ensure  => file,
+#    owner   => 'metro',
+#    group   => 'nobody',
+#    source  => "puppet:///data/tce_estacion/nodes/${::hostname}/usr/local/tce/tce",
+#    replace => false,
+#  }
   file_line { 'autologin':
     path   => '/etc/inittab',
     ensure => 'present',
@@ -495,13 +495,13 @@ class profile::tce_estacion {
     hour    => 2,
     minute  => 10,
   }
-  file { '/var/spool/cron/crontabs/metro':
-    ensure => present,
-    owner  => 'root',
-    group  => 'root',
-    source => "puppet:///data/tce_estacion/nodes/${::hostname}/var/spool/cron/crontabs/metro",
-    mode   => '0400',
-  }
+#  file { '/var/spool/cron/crontabs/metro':
+#    ensure => present,
+#    owner  => 'root',
+#    group  => 'root',
+#    source => "puppet:///data/tce_estacion/nodes/${::hostname}/var/spool/cron/crontabs/metro",
+#    mode   => '0400',
+#  }
   file { '/etc/init.d/logclean':
     ensure => present,
     owner  => 'root',
