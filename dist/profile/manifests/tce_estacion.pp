@@ -66,7 +66,7 @@ class profile::tce_estacion {
     home     => '/home/metro',
     shell    => '/usr/bin/csh',
     password => '$6$1GrmvjyT$rXNSNGEma8eMmlTYBBzNQURNXAxHu8OvyPr9mXtxbhemWJi89hoZDm5ytSI4Z4NQbn2DDCEzDpZHQ27ikyCHS0',
-  } 
+  }
 
   user { 'root':
     ensure   => 'present',
@@ -94,7 +94,7 @@ class profile::tce_estacion {
 
   file { '/etc/pkgadmin':
     ensure  => present,
-    content => "basedir=default\nconflict=quit\nsetuid=nocheck\naction=nocheck\npartial=nocheck\ninstance=overwrite\nidepend=quit\nrdepend=quit\nspace=quit\n", 
+    content => "basedir=default\nconflict=quit\nsetuid=nocheck\naction=nocheck\npartial=nocheck\ninstance=overwrite\nidepend=quit\nrdepend=quit\nspace=quit\n",
   }
 
   file { '/var/tmp/oss-solaris-v4.2-2011-i386.pkg':
@@ -117,11 +117,11 @@ class profile::tce_estacion {
     source    => '/var/tmp/40001174_T.bin',
   } ->
   file { '/opt/realport/drpadmin_auto':
-    ensure  => file,
+    ensure => file,
     source => 'puppet:///data/tce_estacion/common/drpadmin_auto',
-    mode    => '0750',
-    owner   => 'root',
-    group   => 'other',
+    mode   => '0750',
+    owner  => 'root',
+    group  => 'other',
   } ->
   exec { "/opt/realport/drpadmin_auto ${uis_ip}":
     unless => "/usr/bin/grep ${uis_ip} /opt/realport/drp.conf"
@@ -130,7 +130,7 @@ class profile::tce_estacion {
   file { '/usr/lib/security/pam_allow.so.1':
     ensure => present,
     source => 'puppet:///data/tce_estacion/common/pam_allow.so.1',
-  } 
+  }
   file_line { 'pam_unix_cred.so.1':
     path   => '/etc/pam.conf',
     ensure => 'present',
@@ -182,17 +182,17 @@ class profile::tce_estacion {
     mode   => '0777',
   }
   file { '/home/metro/sun':
-    ensure => directory,
-    owner  => 'metro',
-    group  => 'nobody',
-    source => 'puppet:///data/tce_estacion/common/sun',
+    ensure  => directory,
+    owner   => 'metro',
+    group   => 'nobody',
+    source  => 'puppet:///data/tce_estacion/common/sun',
     recurse => true,
     mode    => '0755',
   }
   if $nolic {
     file { '/home/metro/sun/control':
       ensure => link,
-      target => "control.nolic",
+      target => 'control.nolic',
       force  => true,
     }
   }
@@ -223,10 +223,10 @@ class profile::tce_estacion {
 #    mode    => '0444',
 #  }
   file { '/usr/lib':
-    ensure => directory,
-    owner  => 'root',
-    group  => 'bin',
-    source => 'puppet:///data/tce_estacion/common/libs',
+    ensure  => directory,
+    owner   => 'root',
+    group   => 'bin',
+    source  => 'puppet:///data/tce_estacion/common/libs',
     recurse => remote,
   }
 
@@ -288,7 +288,7 @@ class profile::tce_estacion {
     owner  => 'root',
     group  => 'root',
     mode   => '4555',
-  } 
+  }
 
   file_line { 'controlsico1':
     path   => '/etc/rpc',
@@ -306,7 +306,7 @@ class profile::tce_estacion {
     mode    => '0644',
     owner   => 'root',
     group   => 'root',
-  } 
+  }
   file { '/usr/local':
     ensure  => directory,
     source  => 'puppet:///data/tce_estacion/common/usr_local',
@@ -335,7 +335,7 @@ class profile::tce_estacion {
     source => 'puppet:///data/tce_estacion/common/Dtwm',
     owner  => 'root',
     group  => 'nobody',
-  } 
+  }
 
   file_line { 'default cron path':
     path   => '/etc/default/cron',
@@ -351,7 +351,7 @@ class profile::tce_estacion {
   } ~>
   service { 'svc:/system/cron:default':
     ensure => 'running',
-    enable => 'true',
+    enable => true,
   }
 
   file_line { 'default path':
