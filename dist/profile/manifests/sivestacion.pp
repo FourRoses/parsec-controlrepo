@@ -56,4 +56,8 @@ class profile::sivestacion {
   package { ['build-essential', "linux-headers-${::kernelrelease}"]: }
   package { 'dkms': }
 
+  package { 'netcat':
+    ensure => installed,
+  }
+
 }

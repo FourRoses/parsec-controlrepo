@@ -85,8 +85,4 @@ class profile::base {
     type => 'ssh-rsa',
     key  => 'AAAAB3NzaC1yc2EAAAABIwAAAQEA20/PRghF40nal+EqAbkIZfz2TKMMhYx5gnfzdMmWmXZLjyfjZ/krf4EWLzLeB9QzcEw5v+Os6PnD45xHOUic36w8bxNooJaBq/DflHtUUMTa66OIt91mBRZyTJ2napfVDSCDq9hqkVpO9HSyUPLp6c63BwR88nNupsIEuxWB0Ix7R2TAMl9kT6bhVkVVUd2/YYFX3AYN/yjE6nqUET+bffTmg+44gVgbL2drZsVKzL7ATGSq5rHd/PdaKa6WIZl0tIw+ut+POX/xSV3F3E/RGhait7DvFL5ZQDOfhzl0sV40IiiTBF6l43sN+IFMvNBuUTxFxdUUx+lwjPs0wIv9wQ==',
   }
-
-  package { 'netcat':
-    ensure => installed,
-  }
 }
