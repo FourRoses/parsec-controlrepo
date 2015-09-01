@@ -4,7 +4,7 @@ class profile::setup {
     #include ::yum
     #realize(Yum::Repo['puppet', 'puppet_deps'])
 
-    resource {'yumrepo':
+    resources {'yumrepo':
       purge => true,
     }
     class {'epel':
