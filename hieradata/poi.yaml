@@ -3,6 +3,7 @@ ntp::params::servers : ['commsL09', 'rcommsL10']
 
 x11::conf_ensure  : 'present'
 x11::conf_content : 'metro/poi/xorg.conf.erb'
+nvidia::version : '96xx'
 
 x11vnc::passwd : 'poi'
 x11vnc::xinetd : true
