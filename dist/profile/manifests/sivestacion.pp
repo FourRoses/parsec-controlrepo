@@ -1,6 +1,15 @@
 class profile::sivestacion {
   #class {'::metro::siv::estacion': } ->
 
+  class {'::snmp':
+    agentaddress      => hiera('snmp::agentaddress'),
+    views             => hiera('snmp::views'),
+    com2sec           => hiera('snmp::com2sec'),
+    snmpd_config      => hiera('snmp::snmpd_config'),
+    service_hasstatus => hiera('snmp::service_hasstatus'),
+  }
+
+
   package {['libncurses5-dev','libssl-dev','libssl0.9.8']: } # for dgrp compatibility
 
   package {'tcsh': }

@@ -60,14 +60,6 @@ class profile::base {
     show_diff   => true,
   }
 
-  class {'::snmp':
-    agentaddress      => hiera('snmp::agentaddress'),
-    views             => hiera('snmp::views'),
-    com2sec           => hiera('snmp::com2sec'),
-    snmpd_config      => hiera('snmp::snmpd_config'),
-    service_hasstatus => hiera('snmp::service_hasstatus'),
-  }
-
   class {'::ntp':
     servers       => hiera('ntp::params::servers'),
     iburst_enable => true,
