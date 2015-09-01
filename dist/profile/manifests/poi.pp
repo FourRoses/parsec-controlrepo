@@ -14,15 +14,15 @@ class profile::poi (
   }
 
   network::interface { $::foreman_interfaces[0][identifier]:
-    ipaddress  => $::foreman_interfaces[0][ip],
-    netmask    => $::foreman_interfaces[0][attrs][netmask],
-    macaddress => $::foreman_interfaces[0][mac],
-    gateway    => regsubst($::foreman_interfaces[0][ip], '^(\d+\.\d+\.\d+)\.\d+$', '\1.1')
+    ipaddress => $::foreman_interfaces[0][ip],
+    netmask   => $::foreman_interfaces[0][attrs][netmask],
+    hwaddr    => $::foreman_interfaces[0][mac],
+    gateway   => regsubst($::foreman_interfaces[0][ip], '^(\d+\.\d+\.\d+)\.\d+$', '\1.1')
   }
   network::interface { $::foreman_interfaces[1][identifier]:
     ipaddress => $::foreman_interfaces[1][ip],
     netmask   => $::foreman_interfaces[1][attrs][netmask],
-    macaddress => $::foreman_interfaces[1][mac],
+    hwaddr    => $::foreman_interfaces[1][mac],
   }
 
   # ::metro
