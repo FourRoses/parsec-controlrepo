@@ -150,6 +150,8 @@ class profile::poi (
 -b /usr/lib{,64}/libGL*',
   }
 
+  include ::metro
+
   include ::metro::misc::captura
   include ::metro::misc::fonts
   include ::metro::misc::bashprofile
