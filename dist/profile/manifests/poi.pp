@@ -88,6 +88,56 @@ class profile::poi (
     package => 'jre-1.6.0_29-fcs',
   }
 
+  # ::x11
+  package {['xorg-x11-server-Xorg', 'xorg-x11-apps', 'xorg-x11-xinit', 'xterm']:
+    ensure => present,
+  }
+  package {'xorg-x11-server-Xvfb':
+    ensure => present,
+  }
+  $x11_template = hiera('x11::conf_content')
+  if $x11_template == 'absent' {
+    file {'/etc/X11/xorg.conf':
+      ensure  => 'absent',
+    }
+  } else {
+    file {'/etc/X11/xorg.conf':
+      ensure  => present,
+      content => template("${x11_template}"),
+      owner   => 'root',
+      group   => 'root',
+      mode    => '0644',
+    }
+  }
+  augeas {'inittab':
+    changes => ['set /files/etc/inittab/id/runlevels 5',],
+  }
+  package {['fonts-ISO8859-2','fonts-ISO8859-2-100dpi',
+            'fonts-ISO8859-2-75dpi','xorg-x11-fonts-ISO8859-1-75dpi',
+            'xorg-x11-fonts-ISO8859-2-75dpi','xorg-x11-fonts-ISO8859-1-100dpi',
+            'xorg-x11-fonts-ISO8859-2-100dpi','xorg-x11-fonts-Type1']:
+    ensure => present,
+  }
+
+  # ::nvidia
+  $nvidia_version = hiera('nvidia::version')
+  yumrepo {'elrepo':
+    ensure   => present,
+    baseurl  => 'http://16.0.96.20:3142/elrepo.org/linux/elrepo/el$releasever/$basearch',
+    gpgcheck => '0',
+  } ->
+  package {"kmod-nvidia-${nvidia_version}":
+    ensure => installed,
+  } ->
+  file {'/etc/prelink.conf.d/nvidia.conf':
+    ensure => file,
+    content => '-b /usr/lib{,64}/nvidia/*
+-b /usr/lib{,64}/nvidia/tls/*
+-b /usr/lib{,64}/tls/libnvidia-tls*
+-b /usr/lib{,64}/libnvidia-tls*
+-b /usr/lib{,64}/libGL*',
+  }
+
   include ::metro::misc::captura
   include ::metro::misc::fonts
   include ::metro::misc::bashprofile

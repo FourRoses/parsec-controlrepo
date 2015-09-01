@@ -1,0 +1,18 @@
+---
+ntp::params::servers : ['commsL09', 'rcommsL10']
+
+x11::conf_ensure  : 'present'
+x11::conf_content : 'metro/poi/xorg.conf.erb'
+
+x11vnc::passwd : 'poi'
+x11vnc::xinetd : true
+
+gdm::autologin       : 'true'
+gdm::autologin_user  : 'opermm'
+gdm::autologin_delay : '5'
+gdm::disallowtcp     : 'false'
+gdm::server_name     : 'Standard'
+gdm::server_cmd      : '/usr/bin/Xorg -br -audit 0 -ignoreABI'
+
+interfaces::vlan1 : '1'
+interfaces::vlan2 : '11'
