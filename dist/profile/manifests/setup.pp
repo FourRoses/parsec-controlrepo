@@ -3,6 +3,10 @@ class profile::setup {
   if $::osfamily == 'RedHat' {
     #include ::yum
     #realize(Yum::Repo['puppet', 'puppet_deps'])
+
+    resource {'yumrepo':
+      purge => true,
+    }
     class {'epel':
       epel_mirrorlist => 'absent',
       epel_baseurl    => 'http://16.0.96.20:3142/epel.mirrors.ovh.net/epel/$releasever/$basearch'
