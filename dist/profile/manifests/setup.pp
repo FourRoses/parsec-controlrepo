@@ -15,7 +15,12 @@ class profile::setup {
     yumrepo { 'centos-base':
       baseurl => 'http://16.0.96.20:3142/centos.mirrors.ovh.net/ftp.centos.org/$releasever/os/$basearch',
       gpgkey  => "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-${facts['operatingsystemmajrelease']}",
-      descr   => 'CentOS-$releasever - Base',
+      descr   => "CentOS-${facts['operatingsystemmajrelease']} - Base",
+    }
+    yumrepo { 'centos-updates':
+      baseurl => 'http://16.0.96.20:3142/centos.mirrors.ovh.net/ftp.centos.org/$releasever/updates/$basearch',
+      gpgkey  => "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-${facts['operatingsystemmajrelease']}",
+      descr   => "CentOS-${facts['operatingsystemmajrelease']} - Updates",
     }
   }
 
