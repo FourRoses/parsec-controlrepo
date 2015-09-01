@@ -98,9 +98,6 @@ class profile::poi (
     ensure   => installed,
     provider => 'rpm',
     source   => '/var/tmp/jre-6u29-linux-i586.rpm',
-  } ->
-  class {'java':
-    package => 'jre-1.6.0_29-fcs',
   }
 
   # ::x11
