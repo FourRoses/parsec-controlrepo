@@ -11,6 +11,12 @@ class profile::setup {
       epel_mirrorlist => 'absent',
       epel_baseurl    => 'http://16.0.96.20:3142/epel.mirrors.ovh.net/epel/$releasever/$basearch'
     }
+
+    yumrepo { 'centos-base':
+      baseurl        => 'http://16.0.96.20:3142/centos.mirrors.ovh.net/ftp.centos.org/$releasever/os/$basearch',
+      gpgkey         => "gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-${facts['operatingsystemmajrelease']}",
+      descr          => 'CentOS-$releasever - Base',
+    }
   }
 
   user {'root':
