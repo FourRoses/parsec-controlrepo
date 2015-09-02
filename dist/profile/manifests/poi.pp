@@ -2,6 +2,12 @@ class profile::poi (
   $apps,
 ) {
 
+  yumrepo {'poi':
+    ensure   => present,
+    baseurl  => 'http://16.0.96.20/repo/poi',
+    gpgcheck => '0',
+  }
+
   class {'::snmp':
     agentaddress => hiera('snmp::agentaddress'),
     views        => hiera('snmp::views'),
@@ -115,7 +121,7 @@ class profile::poi (
   } else {
     file {'/etc/X11/xorg.conf':
       ensure  => present,
-      content => template("${x11_template}"),
+      content => template($x11_template),
       owner   => 'root',
       group   => 'root',
       mode    => '0644',
@@ -142,7 +148,7 @@ class profile::poi (
     ensure => installed,
   } ->
   file {'/etc/prelink.conf.d/nvidia.conf':
-    ensure => file,
+    ensure  => file,
     content => '-b /usr/lib{,64}/nvidia/*
 -b /usr/lib{,64}/nvidia/tls/*
 -b /usr/lib{,64}/tls/libnvidia-tls*
