@@ -150,6 +150,18 @@ class profile::poi (
 -b /usr/lib{,64}/libGL*',
   }
 
+  # ::gdm
+  package {'gdm':
+    ensure => installed,
+  }
+  file { '/etc/gdm/custom.conf' :
+    ensure  => present,
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0644',
+    content => template('metro/custom.conf.erb'),
+  }
+
   include ::x11vnc
 
   include ::metro
