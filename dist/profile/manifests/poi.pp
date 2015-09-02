@@ -150,6 +150,8 @@ class profile::poi (
 -b /usr/lib{,64}/libGL*',
   }
 
+  include ::x11vnc
+
   include ::metro
 
   include ::metro::misc::captura
