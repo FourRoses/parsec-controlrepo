@@ -1,0 +1,16 @@
+---
+profiles::poi::apps : ['ctc', 'xpostit', 'tn', 'tce']
+
+metro::ctc::monitor : '0'
+metro::ctc::rol     : 'observador'
+metro::ctc::rt      : true
+
+metro::xpostit::monitor : '0'
+
+metro::tn::monitor : '1'
+metro::tn::rol     : 'supervisor'
+
+metro::tce::client::monitor : '1'
+metro::tce::client::id      : '28'
+metro::tce::client::server  : ['CentralTCE', 'CentralPCI']
+metro::tce::client::rol     : 'visualizador'
