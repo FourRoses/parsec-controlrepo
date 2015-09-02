@@ -162,6 +162,23 @@ class profile::poi (
     content => template('metro/custom.conf.erb'),
   }
 
+  # ::pexserver
+  package {'sico-pexserver-sivtce':
+    ensure => latest,
+  } ->
+  file {'/usr/local/sico/lib/libXm.so.2':
+    ensure => link,
+    target => '/usr/X11R6/lib/libXm.so.2',
+  } ->
+  file {'/usr/local/sico/pexserver/functions':
+    #ensure  => present,
+    #mode    => '0755',
+    #source  => 'puppet:///modules/pexserver/functions',
+    ensure => link,
+    target => '/etc/rc.d/init.d/functions',
+    force  => true,
+  }
+
   include ::x11vnc
 
   include ::metro
