@@ -1,5 +1,5 @@
 ---
-profiles::poi::apps : ['ctc', 'xpostit', 'tn', 'tce']
+profile::poi::apps : ['ctc', 'xpostit', 'tn', 'tce']
 
 metro::ctc::monitor : '0'
 metro::ctc::rol     : 'observador'
