@@ -1,4 +1,4 @@
-class profile::repositories
+class profile::repositories {
 
   if $::osfamily == 'Debian' {
     class {'::apt':
@@ -37,7 +37,5 @@ class profile::repositories
         'source' => 'http://16.0.96.20/repo/puppet/pubkey.gpg',
       }
     }
-  }
-  if $::osfamily == 'RedHat' {
   }
 }
