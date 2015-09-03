@@ -185,6 +185,14 @@ class profile::poi (
     force  => true,
   }
 
+  # ::openmotif
+  package {'openmotif':
+    ensure => present,
+  }
+  package {'openmotif22':
+    ensure => present,
+  }
+
   include ::x11vnc
 
   include ::metro
