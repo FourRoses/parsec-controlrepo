@@ -201,6 +201,21 @@ class profile::tce_estacion {
     target => "cancela_${cancela}",
     force  => true,
   }
+  file { '/home/metro/sun/router':
+    ensure => link,
+    target => 'router.Motif',
+    force  => true,
+  }
+  file { '/home/metro/sun/s7_cancela':
+    ensure => link,
+    target => 'cancela_siemens',
+    force  => true,
+  }
+  file { '/home/metro/sun/ventilacion':
+    ensure => link,
+    target => 'ventilacion.ORIG',
+    force  => true,
+  }
   file { '/home/metro/sistema/V1':
     ensure => link,
     target => '/home/metro/sistema/V',
