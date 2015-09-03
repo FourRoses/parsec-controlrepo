@@ -148,7 +148,7 @@ class profile::tce_estacion {
     group        => 'nobody',
     sourceselect => all,
     source       => ["puppet:///data/tce_estacion/nodes/${::hostname}/home/metro",
-                     'puppet:///data/tce_estacion/common/home_metro'],
+                     'puppet:///data/tce_estacion/common/home/metro'],
     recurse      => remote,
     replace      => false,
     require      => File_line['auto_home'],
