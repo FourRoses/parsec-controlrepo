@@ -6,6 +6,7 @@ class profile::poi (
     ensure   => present,
     baseurl  => 'http://16.0.96.20/repo/poi',
     gpgcheck => '0',
+    descr    => 'Metro POIs',
   }
 
   class {'::snmp':
@@ -143,6 +144,7 @@ class profile::poi (
     ensure   => present,
     baseurl  => 'http://16.0.96.20:3142/elrepo.org/linux/elrepo/el$releasever/$basearch',
     gpgcheck => '0',
+    descr    => 'ELRepo Project',
   } ->
   package {"kmod-nvidia-${nvidia_version}":
     ensure => installed,
