@@ -241,7 +241,7 @@ class profile::tce_estacion {
     ensure  => directory,
     owner   => 'root',
     group   => 'bin',
-    source  => 'puppet:///data/tce_estacion/common/libs',
+    source  => 'puppet:///data/tce_estacion/common/usr/lib',
     recurse => remote,
   }
 
