@@ -324,7 +324,7 @@ class profile::tce_estacion {
   }
   file { '/usr/local':
     ensure  => directory,
-    source  => 'puppet:///data/tce_estacion/common/usr_local',
+    source  => 'puppet:///data/tce_estacion/common/usr/local',
     recurse => remote,
   }
   file { '/usr/local/tce':
