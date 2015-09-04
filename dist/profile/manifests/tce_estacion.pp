@@ -147,13 +147,13 @@ class profile::tce_estacion {
     owner  => 'metro',
     group  => 'nobody',
   }
-  file { '/home/metro/sistema/V':
+  file { '/home/metro/sistema':
     ensure       => directory,
     owner        => 'metro',
     group        => 'nobody',
     sourceselect => all,
-    source       => ["puppet:///data/tce_estacion/nodes/${::hostname}/home/metro/sistema/V",
-                     'puppet:///data/tce_estacion/common/home/metro/sistema/V'],
+    source       => ["puppet:///data/tce_estacion/nodes/${::hostname}/home/metro/sistema",
+                     'puppet:///data/tce_estacion/common/home/metro/sistema'],
     recurse      => remote,
     replace      => false,
     require      => File_line['auto_home'],
