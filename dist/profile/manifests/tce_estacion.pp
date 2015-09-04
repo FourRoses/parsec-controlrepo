@@ -99,7 +99,7 @@ class profile::tce_estacion {
 
   file { '/var/tmp/oss-solaris-v4.2-2011-i386.pkg':
     ensure => present,
-    source => 'puppet:///data/tce_estacion/common/oss-solaris-v4.2-2011-i386.pkg',
+    source => 'puppet:///data/tce_estacion/common/var/tmp/oss-solaris-v4.2-2011-i386.pkg',
   } ->
   package { 'oss':
     ensure    => installed,
@@ -109,7 +109,7 @@ class profile::tce_estacion {
 
   file { '/var/tmp/40001174_T.bin':
     ensure => present,
-    source => 'puppet:///data/tce_estacion/common/40001174_T.bin',
+    source => 'puppet:///data/tce_estacion/common/var/tmp/40001174_T.bin',
   } ->
   package { 'realport':
     ensure    => installed,
@@ -118,7 +118,7 @@ class profile::tce_estacion {
   } ->
   file { '/opt/realport/drpadmin_auto':
     ensure => file,
-    source => 'puppet:///data/tce_estacion/common/drpadmin_auto',
+    source => 'puppet:///data/tce_estacion/common/opt/realport/drpadmin_auto',
     mode   => '0750',
     owner  => 'root',
     group  => 'other',
@@ -129,7 +129,7 @@ class profile::tce_estacion {
 
   file { '/usr/lib/security/pam_allow.so.1':
     ensure => present,
-    source => 'puppet:///data/tce_estacion/common/pam_allow.so.1',
+    source => 'puppet:///data/tce_estacion/common/usr/lib/security/pam_allow.so.1',
   }
   file_line { 'pam_unix_cred.so.1':
     path   => '/etc/pam.conf',
@@ -143,12 +143,17 @@ class profile::tce_estacion {
   }
 
   file { '/home/metro':
+    ensure => directory,
+    owner  => 'metro',
+    group  => 'nobody',
+  }
+  file { '/home/metro/sistema/V':
     ensure       => directory,
     owner        => 'metro',
     group        => 'nobody',
     sourceselect => all,
-    source       => ["puppet:///data/tce_estacion/nodes/${::hostname}/home/metro",
-                     'puppet:///data/tce_estacion/common/home/metro'],
+    source       => ["puppet:///data/tce_estacion/nodes/${::hostname}/home/metro/sistema/V",
+                     'puppet:///data/tce_estacion/common/home/metro/sistema/V'],
     recurse      => remote,
     replace      => false,
     require      => File_line['auto_home'],
@@ -157,35 +162,35 @@ class profile::tce_estacion {
     ensure => file,
     owner  => 'metro',
     group  => 'nobody',
-    source => 'puppet:///data/tce_estacion/common/cshrc',
+    source => 'puppet:///data/tce_estacion/common/home/metro/cshrc',
     mode   => '0644',
   }
   file { '/home/metro/.login':
     ensure => file,
     owner  => 'metro',
     group  => 'nobody',
-    source => "puppet:///data/tce_estacion/common/${login_file}",
+    source => "puppet:///data/tce_estacion/common/home/metro/${login_file}",
     mode   => '0777',
   }
   file { '/home/metro/.autoarranque':
     ensure => file,
     owner  => 'metro',
     group  => 'nobody',
-    source => 'puppet:///data/tce_estacion/common/autoarranque',
+    source => 'puppet:///data/tce_estacion/common/home/metro/autoarranque',
     mode   => '0777',
   }
   file { '/home/metro/.autostart':
     ensure => file,
     owner  => 'metro',
     group  => 'nobody',
-    source => "puppet:///data/tce_estacion/common/${autostart_file}",
+    source => "puppet:///data/tce_estacion/common/home/metro/${autostart_file}",
     mode   => '0777',
   }
   file { '/home/metro/sun':
     ensure  => directory,
     owner   => 'metro',
     group   => 'nobody',
-    source  => 'puppet:///data/tce_estacion/common/sun',
+    source  => 'puppet:///data/tce_estacion/common/home/metro/sun',
     recurse => true,
     mode    => '0755',
   }
@@ -275,7 +280,7 @@ class profile::tce_estacion {
     ensure  => directory,
     owner   => 'metro',
     group   => 'nobody',
-    source  => 'puppet:///data/tce_estacion/common/scripts',
+    source  => 'puppet:///data/tce_estacion/common/home/metro/ControlId/scripts',
     recurse => true,
     mode    => '0755',
   }
@@ -299,7 +304,7 @@ class profile::tce_estacion {
 
   file { '/usr/bin/distsh2':
     ensure => present,
-    source => 'puppet:///data/tce_estacion/common/distsh2',
+    source => 'puppet:///data/tce_estacion/common/usr/bin/distsh2',
     owner  => 'root',
     group  => 'root',
     mode   => '4555',
@@ -347,7 +352,7 @@ class profile::tce_estacion {
 
   file { '/home/metro/Dtwm':
     ensure => present,
-    source => 'puppet:///data/tce_estacion/common/Dtwm',
+    source => 'puppet:///data/tce_estacion/common/home/metro/Dtwm',
     owner  => 'root',
     group  => 'nobody',
   }
@@ -443,28 +448,28 @@ class profile::tce_estacion {
 
   file { '/usr/bin/check_mon.sh' :
     ensure => present,
-    source => 'puppet:///data/tce_estacion/common/check_mon.sh',
+    source => 'puppet:///data/tce_estacion/common/usr/bin/check_mon.sh',
     mode   => '0755',
     owner  => 'root',
     group  => 'bin',
   }
   file { '/usr/bin/check_controlnow.sh' :
     ensure => present,
-    source => 'puppet:///data/tce_estacion/common/check_controlnow.sh',
+    source => 'puppet:///data/tce_estacion/common/usr/bin/check_controlnow.sh',
     mode   => '0755',
     owner  => 'root',
     group  => 'bin',
   }
   file { '/usr/bin/check_routernow.sh' :
     ensure => present,
-    source => 'puppet:///data/tce_estacion/common/check_routernow.sh',
+    source => 'puppet:///data/tce_estacion/common/usr/bin/check_routernow.sh',
     mode   => '0755',
     owner  => 'root',
     group  => 'bin',
   }
   file { '/usr/bin/check_discos.sh' :
     ensure => present,
-    source => 'puppet:///data/tce_estacion/common/check_discos.sh',
+    source => 'puppet:///data/tce_estacion/common/usr/bin/check_discos.sh',
     mode   => '0755',
     owner  => 'root',
     group  => 'bin',
@@ -522,7 +527,7 @@ class profile::tce_estacion {
     owner  => 'root',
     group  => 'root',
     mode   => '0755',
-    source => 'puppet:///data/tce_estacion/common/logclean',
+    source => 'puppet:///data/tce_estacion/common/etc/init.d/logclean',
   }
   file {'/etc/rc2.d/S02logclean':
     ensure => link,
@@ -533,7 +538,7 @@ class profile::tce_estacion {
     owner  => 'root',
     group  => 'root',
     mode   => '0755',
-    source => 'puppet:///data/tce_estacion/common/logclean_metro',
+    source => 'puppet:///data/tce_estacion/common/etc/init.d/logclean_metro',
   }
   file {'/etc/rc2.d/S03logclean_metro':
     ensure => link,
@@ -544,7 +549,7 @@ class profile::tce_estacion {
     owner  => 'root',
     group  => 'root',
     mode   => '0755',
-    source => 'puppet:///data/tce_estacion/common/logclean_ppp',
+    source => 'puppet:///data/tce_estacion/common/etc/init.d/logclean_ppp',
   }
   file {'/etc/rc2.d/S04logclean_ppp':
     ensure => link,
@@ -582,7 +587,7 @@ class profile::tce_estacion {
       ensure => present,
       owner  => 'root',
       group  => 'root',
-      source => 'puppet:///data/tce_estacion/common/mbt-ppp',
+      source => 'puppet:///data/tce_estacion/common/etc/ppp/peers/mbt-ppp',
     }
   }
 }
