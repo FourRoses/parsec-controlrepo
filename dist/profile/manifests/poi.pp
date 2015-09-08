@@ -178,18 +178,15 @@ class profile::poi (
     ensure => link,
     target => '/usr/X11R6/lib/libXm.so.2',
   } ->
-  #file {'/usr/local/sico/pexserver/functions':
-  #  #ensure  => present,
-  #  #mode    => '0755',
-  #  #source  => 'puppet:///modules/pexserver/functions',
-  #  ensure => link,
-  #  target => '/etc/rc.d/init.d/functions',
-  #  force  => true,
-  #}
+  file {'/usr/local/sico/pexserver/functions':
+    ensure  => present,
+    mode    => '0755',
+    source  => 'puppet:///data/poi/common/usr/local/sico/pexserver/functions',
+  } ->
   file {'/etc/init.d/SicoPexServer':
-    ensure => link,
-    force  => true,
-    target => '/usr/local/sico/tce/Configuracion/SicoPexServer',
+    ensure  => present,
+    mode    => '0755',
+    source  => 'puppet:///data/poi/common/etc/init.d/SicoPexServer',
   } ->
   service {'SicoPexServer':
     ensure     => running,
