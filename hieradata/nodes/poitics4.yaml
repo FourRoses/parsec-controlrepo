@@ -1,5 +1,5 @@
 ---
-profiles::poi::apps : ['tce', 'isacd']
+profile::poi::apps : ['tce', 'isacd']
 
 metro::tce::client::monitor : '0'
 metro::tce::client::id      : '83'
