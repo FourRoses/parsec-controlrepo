@@ -9,3 +9,5 @@ metro::tce::client::ctc_server : 'SIVBROKER1'
 
 metro::isacd::monitor : '0'
 metro::isacd::rol     : ['formacion']
+
+x11::conf_content : 'absent'
