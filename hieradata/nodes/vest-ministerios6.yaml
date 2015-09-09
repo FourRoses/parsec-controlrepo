@@ -1,0 +1,6 @@
+---
+metro::tce::uis_ip : '18.2.58.80'
+metro::tce::cancela : 'schneider'
+metro::tce::plano : false
+metro::tce::maestra_ip : false
+metro::tce::mbt : false

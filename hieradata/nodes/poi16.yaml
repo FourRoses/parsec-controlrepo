@@ -1,0 +1,15 @@
+---
+profile::poi::apps : ['ctc', 'xpostit', 'igcamaras', 'ats']
+
+metro::ctc::monitor : ['0', '1']
+metro::ctc::rol : 'supervisor'
+metro::ctc::tel : true
+
+metro::xpostit::monitor : ['0', '1']
+
+metro::enrutador::monitor : '1'
+
+metro::tn::monitor : '0'
+metro::tn::rol : 'supervisor'
+
+metro::igcamaras::monitor : '0'

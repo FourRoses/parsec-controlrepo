@@ -1,0 +1,13 @@
+---
+profile::poi::apps : ['ctcligero', 'xpostit', 'rt', 'tce']
+
+metro::ctcligero::monitor : '0'
+
+metro::xpostit::monitor : '0'
+
+metro::tce::client::monitor : '2'
+metro::tce::client::id      : '24'
+metro::tce::client::server  : ['CentralTCE', 'CentralPCI']
+metro::tce::client::rol     : 'desconocido'
+
+metro::rt::monitor : '1'

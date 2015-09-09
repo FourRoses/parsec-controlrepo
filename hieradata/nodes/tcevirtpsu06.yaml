@@ -1,0 +1,15 @@
+---
+hosts::replace : 'true'
+
+x11::wm           : 'motif'
+x11::dm           : 'gdm'
+x11vnc::passwd    : 'tce'
+x11vnc::ssl         : true
+
+gdm::autologin       : 'true'
+gdm::autologin_user  : 'opermm'
+gdm::autologin_delay : '5'
+gdm::disallowtcp     : 'false'
+gdm::vtallocation    : 'false'
+gdm::server_name     : 'vdi'
+gdm::server_cmd      : '/usr/bin/Xvfb -screen 0 1280x1024x24 -ac -wm +bs -fp /usr/local/fonts,/usr/local/sico/tce/fonts/misc,/usr/share/fonts,/usr/share/X11/fonts,unix/:7100 +extension BIG-REQUESTS +extension DAMAGE +extension DOUBLE-BUFFER +extension Extended-Visual-Information +extension GLX +extension MIT-SCREEN-SAVER +extension MIT-SUNDRY-NONSTANDARD +extension RANDR +extension RENDER +extension SHAPE +extension SECURITY +extension SYNC +extension TOG-CUP +extension X-Resource +extension XC-APPGROUP +extension XC-MISC +extension XEVIE +extension XFree86-Bigfont +extension XFree86-DGA +extension XFree86-DRI +extension XFree86-Misc +extension XFree86-VidModeExtension +extension XFIXES +extension XInputExtension +extension XKEYBOARD +extension XTEST +extension XVideo'

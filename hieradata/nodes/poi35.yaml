@@ -1,0 +1,11 @@
+---
+profile::poi::apps : ['tce']
+
+nvidia::version : '304xx-PAE'
+
+metro::tce::client::monitor : '0'
+metro::tce::client::id      : '21'
+metro::tce::client::server  : ['CentralTCE', 'CentralPCI']
+metro::tce::client::rol     : 'visualizador'
+
+x11::conf_content : 'metro/poi/xorg.conf.retro.erb'

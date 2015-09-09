@@ -1,0 +1,5 @@
+---
+metro::tce::uis_ip : '37.69.58.12'
+metro::tce::cancela : 'mayser'
+metro::tce::mbt : '3.0.3.3'
+metro::tce::maestra_ip : false

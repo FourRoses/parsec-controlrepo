@@ -1,0 +1,4 @@
+---
+metro::tce::uis_ip : '16.197.58.226'
+metro::tce::cancela : 'schneider'
+metro::tce::mbt : false

@@ -1,0 +1,14 @@
+---
+profile::poi::apps : ['rt']
+
+metro::ctcligero::monitor : '0'
+
+metro::tce::client::monitor : '0'
+metro::tce::client::id      : '44'
+metro::tce::client::server  : ['CentralTCE', 'CentralPCI']
+metro::tce::client::rol     : 'visualizador'
+
+metro::rt::monitor : '0'
+
+metro::isacd::monitor : '0'
+metro::isacd::rol     : ['estaciones', 'seguridad']

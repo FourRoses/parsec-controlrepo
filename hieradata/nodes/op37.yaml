@@ -1,0 +1,13 @@
+---
+profile::poi::apps : ['tce', 'isacd']
+
+metro::tce::client::monitor : '0'
+metro::tce::client::id      : '37'
+metro::tce::client::server  : ['CentralTCE', 'CentralPCI', 'CentralSIV2']
+metro::tce::client::rol     : 'operador'
+metro::tce::client::ctc_server : 'SIVBROKER1'
+
+metro::isacd::monitor : '0'
+metro::isacd::rol     : ['4x1']
+
+x11::conf_content : 'metro/poi/xorg.conf.mga.erb'

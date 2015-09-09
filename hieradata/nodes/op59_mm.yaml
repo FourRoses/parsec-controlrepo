@@ -1,0 +1,11 @@
+---
+profile::poi::apps : ['tce', 'isacd', 'controlpantallas']
+
+metro::tce::client::monitor : '0'
+metro::tce::client::id      : '59'
+metro::tce::client::server  : ['CentralTCE', 'CentralPCI', 'CentralSIV1']
+metro::tce::client::rol     : 'operador'
+metro::tce::client::ctc_server : 'SIVBROKER1'
+
+metro::isacd::monitor : '0'
+metro::isacd::rol     : ['formacion']

@@ -1,0 +1,18 @@
+---
+profile::poi::apps : ['ctc', 'xpostit', 'siv', 'megafonia']
+
+metro::ctc::monitor : '0'
+metro::ctc::rol     : 'observador'
+metro::ctc::tel     : true
+
+metro::xpostit::monitor : '0'
+
+metro::siv::client::monitor : '2'
+metro::siv::client::id      : '16'
+metro::siv::client::server  : ['centralsiv1', 'CentralTCE']
+metro::siv::client::rol     : 'operador'
+metro::siv::client::mode    : 'CBTC'
+
+metro::megafonia::monitor : '1'
+
+metro::tn::rol : 'observador'

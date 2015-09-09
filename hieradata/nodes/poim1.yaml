@@ -1,0 +1,9 @@
+---
+profile::poi::apps : ['rt']
+
+metro::rt::monitor : '0'
+metro::hosts::ip_nca: '16.0.71.141'
+
+interfaces::vlan1 : '2'
+interfaces::vlan2 : '12'
+

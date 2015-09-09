@@ -1,0 +1,9 @@
+---
+profile::poi::apps : ['ctc']
+
+metro::ctc::monitor : '0'
+metro::ctc::rol     : 'observador'
+metro::ctc::retros  : true
+
+x11::conf_content : 'absent'
+metro::tn::rol : 'inspector'

@@ -1,0 +1,36 @@
+---
+profile::poi::apps : ['ctc', 'tn', 'sirei', 'xpostit', 'siv', 'herramienta']
+
+metro::ctc::monitor : ['0', '1']
+metro::ctc::rol : 'operador'
+
+#metro::enrutador::monitor : '1'
+
+metro::sirei::monitor : '0'
+
+metro::tn::monitor : '1'
+metro::tn::rol     : 'inspector'
+
+metro::siv::client::monitor : '2'
+metro::siv::client::id : '58'
+metro::siv::client::server : 'centralsiv2'
+metro::siv::client::rol : 'operador'
+
+metro::tce::client::monitor : 
+metro::tce::client::id : '92'
+metro::tce::client::server : 'centralCOMMIT'
+metro::tce::client::rol: 'visualizador'
+
+metro::xpostit::monitor : ['0', '1']
+
+hosts::replace : true
+
+x11::conf_content : 'absent'
+
+interfaces::vlan1 : '2'
+interfaces::vlan2 : '12'
+
+gdm::vtallocation : 'false'
+gdm::server_name  : 'vdi'
+gdm::server_cmd   : '/usr/bin/Xvfb -screen 0 1280x1024x24 -screen 1 1280x1024x24 -screen 2 1280x1024x24 -ac -wm +bs -fp /usr/local/fonts,unix/:7100 +extension BIG-REQUESTS +extension DAMAGE +extension DOUBLE-BUFFER +extension Extended-Visual-Information +extension GLX +extension MIT-SCREEN-SAVER +extension MIT-SUNDRY-NONSTANDARD +extension RANDR +extension RENDER +extension SHAPE +extension SECURITY +extension SYNC +extension TOG-CUP +extension X-Resource +extension XC-APPGROUP +extension XC-MISC +extension XEVIE +extension XFree86-Bigfont +extension XFree86-DGA +extension XFree86-DRI +extension XFree86-Misc +extension XFree86-VidModeExtension +extension XFIXES +extension XInputExtension +extension XKEYBOARD +extension XTEST +extension XVideo'
+

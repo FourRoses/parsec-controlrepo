@@ -1,0 +1,19 @@
+---
+profile::poi::apps : ['ctc']
+
+metro::ctc::monitor : ['0']
+metro::ctc::rol : 'operador'
+metro::ctc::tel : true
+
+metro::ats::monitor : '0'
+
+metro::xpostit::monitor : ['0']
+
+metro::enrutador::monitor : '0'
+
+metro::tn::monitor : '0'
+metro::tn::rol : 'inspector'
+
+metro::igcamaras::monitor : '0'
+
+metro::sirei::monitor : '0'

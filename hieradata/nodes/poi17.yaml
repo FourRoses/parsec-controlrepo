@@ -1,0 +1,14 @@
+---
+profile::poi::apps : ['ctc', 'enrutador', 'xpostit', 'tn']
+
+metro::ctc::monitor : ['0', '1']
+metro::ctc::rol : 'observador'
+metro::ctc::rt  : true
+metro::ctc::tel : true
+
+metro::xpostit::monitor : ['0', '1']
+
+metro::tn::monitor : '0'
+metro::tn::rol : 'observador'
+
+metro::enrutador::monitor : '0'

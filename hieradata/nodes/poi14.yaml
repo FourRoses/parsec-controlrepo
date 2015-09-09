@@ -1,0 +1,17 @@
+---
+profile::poi::apps : ['ctc', 'xpostit', 'enrutador', 'tn', 'vncpogui']
+
+metro::ctc::monitor : '0'
+metro::ctc::rol : 'supervisor'
+metro::ctc::tel : true
+
+metro::xpostit::monitor : '0'
+
+metro::enrutador::monitor : '0'
+
+metro::tn::monitor : '0'
+metro::tn::rol : 'supervisor'
+
+metro::vncpogui::monitor : '1'
+elotouch::monitor : '1'
+

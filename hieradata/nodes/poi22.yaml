@@ -1,0 +1,20 @@
+---
+profile::poi::apps : ['ctc', 'xpostit', 'rt', 'isacd', 'tce']
+
+metro::ctc::monitor : '0'
+metro::ctc::rol : 'observador'
+
+metro::xpostit::monitor : '0'
+
+metro::tn::rol : 'observador'
+
+metro::rt::monitor : '1'
+
+metro::isacd::monitor : '2'
+metro::isacd::rol     : ['estaciones', 'seguridad']
+
+metro::tce::client::monitor : '2'
+metro::tce::client::id     : '23'
+metro::tce::client::server  : ['CentralTCE', 'CentralPCI']
+metro::tce::client::rol     : 'desconocido'
+metro::tce::client::interfonia : true

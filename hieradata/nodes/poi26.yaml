@@ -1,0 +1,14 @@
+---
+profile::poi::apps : ['ctcligero', 'rt', 'tce', 'isacd']
+
+metro::ctcligero::monitor : '1'
+
+metro::tce::client::monitor : '0'
+metro::tce::client::id      : '20'
+metro::tce::client::server  : ['CentralTCE', 'CentralPCI', 'CentralHR']
+metro::tce::client::rol     : 
+
+metro::rt::monitor : '2'
+
+metro::isacd::monitor : '0'
+metro::isacd::rol     : ['estaciones', 'seguridad']

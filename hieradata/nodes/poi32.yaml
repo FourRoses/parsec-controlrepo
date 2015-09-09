@@ -1,0 +1,8 @@
+---
+profile::poi::apps : ['ctc', 'xpostit']
+
+metro::ctc::monitor : ['0', '1']
+metro::ctc::rol     : 'supervisor'
+metro::ctc::rt      : true
+
+metro::xpostit::monitor : ['0', '1']

@@ -1,0 +1,4 @@
+---
+metro::tce::uis_ip : '20.87.58.64'
+metro::tce::cancela : 'mayser'
+metro::tce::mbt : false

@@ -1,0 +1,11 @@
+---
+profile::poi::apps : ['tce', 'isacd']
+
+metro::tce::client::monitor : '0'
+metro::tce::client::id      : '81'
+metro::tce::client::server  : ['CentralTCE', 'CentralPCI', 'centralsiv1']
+metro::tce::client::rol     : 'operador'
+metro::tce::client::psur    : true
+
+metro::isacd::monitor : '0'
+metro::isacd::rol     : ['estaciones-psu']
