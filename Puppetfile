@@ -2,7 +2,7 @@ forge "http://forge.puppetlabs.com"
 
 # Modules from the Puppet Forge
 mod "adrien/alternatives", "0.3.0"
-mod "CraigWatson1987/vmwaretools", "2.1.0"
+mod "CraigWatson1987/vmwaretools", "2.1.2"
 mod "example42/network", "3.1.23"
 mod "example42/stdmod", "0.0.4"
 mod "ghoneycutt/dnsclient", "3.4.0"
