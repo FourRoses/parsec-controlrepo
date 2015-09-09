@@ -22,6 +22,10 @@ class profile::base {
     show_diff   => true,
   }
 
+  package {'facter':
+    ensure => latest,
+  }
+
   class {'::ntp':
     servers       => hiera('ntp::params::servers'),
     iburst_enable => true,
