@@ -206,6 +206,11 @@ class profile::poi (
     ensure => present,
   }
 
+  # ::vncviewer
+  package {'vnc':
+    ensure => present,
+  }
+
   include ::x11vnc
 
   include ::metro
@@ -298,7 +303,6 @@ class profile::poi (
     class {'metro::isacd':}
   }
   if member($apps, 'vncpogui') {
-    include ::vncviewer
     include metro::vncpogui
     class {'elotouch':
       monitor => hiera(metro::vncpogui::monitor)
