@@ -8,6 +8,8 @@ metro::tce::client::rol     : 'operador'
 metro::tce::client::ctc_server : 'SIVBROKER1'
 
 metro::isacd::monitor : '0'
-metro::isacd::rol     : ['estaciones-aam']
+metro::isacd::rol     :
+  estaciones-aam:
+    crp: '4x1'
 
 x11::conf_content : 'metro/poi/xorg.conf.op37_mm.erb'

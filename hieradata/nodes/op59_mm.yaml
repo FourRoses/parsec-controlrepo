@@ -8,4 +8,6 @@ metro::tce::client::rol     : 'operador'
 metro::tce::client::ctc_server : 'SIVBROKER1'
 
 metro::isacd::monitor : '0'
-metro::isacd::rol     : ['formacion']
+metro::isacd::rol     : 
+  formacion:
+    crp : '4x1'

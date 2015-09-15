@@ -12,7 +12,12 @@ metro::tn::rol : 'observador'
 metro::rt::monitor : '1'
 
 metro::isacd::monitor : '2'
-metro::isacd::rol     : ['estaciones', 'seguridad']
+#metro::isacd::rol     : ['estaciones', 'seguridad']
+metro::isacd::rol     : 
+  estaciones:
+    crp: '6x2'
+  seguridad :
+    crp: 'seguridad'
 
 metro::tce::client::monitor : '2'
 metro::tce::client::id     : '22'
