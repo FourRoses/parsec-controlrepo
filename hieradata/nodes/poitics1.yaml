@@ -8,7 +8,9 @@ metro::tce::client::rol     : 'visualizador'
 metro::tce::client::psur    : true
 
 metro::isacd::monitor : '0'
-metro::isacd::rol     : ['estaciones-psu']
+metro::isacd::rol     : 
+  estaciones-psu:
+    crp: '6x2'
 
 metro::ctc::monitor : ['0', '1', '2']
 metro::ctc::rol     : 'operador'
