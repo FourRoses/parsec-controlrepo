@@ -1,5 +1,4 @@
-class role::tce inherits role {
-  include profile::x11
-  include profile::vncserver
+class role::tce {
+  include profile::base
   include profile::tce_solo
 }
