@@ -6,6 +6,7 @@ metro::tce::client::id      : '55'
 metro::tce::client::server  : ['CentralTCE', 'CentralPCI', 'CentralSIV2']
 metro::tce::client::rol     : 'operador'
 metro::tce::client::ctc_server : 'SIVBROKER1'
+metro::tce::client::psur : true
 
 metro::isacd::monitor : '0'
 metro::isacd::rol     :
