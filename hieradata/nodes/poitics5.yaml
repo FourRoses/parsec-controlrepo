@@ -10,7 +10,7 @@ metro::tce::client::psur    : true
 metro::isacd::monitor : '1'
 metro::isacd::rol     : 
   seguridad-psu:
-    crp: '6x2-trenes'
+    crp: 'seguridad-psu'
 
 
 metro::ctc::monitor : ['0', '1', '2']
