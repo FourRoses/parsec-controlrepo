@@ -1,10 +1,21 @@
 class profile::tce_solo {
-  include ::metro
-  include ::metro::xsession
-  include ::metro::xresources
-  include ::metro::misc::xlinks
-  include ::metro::misc::fonts
-  include ::metro::sico::keys
+
+  # ::metro
+  user {'opermm':
+    ensure     => 'present',
+    uid        => '502',
+    gid        => '501',
+    groups     => 'uucp',
+    comment    => 'Usuario que lanza el CTC',
+    home       => '/home/opermm',
+    managehome => true,
+    shell      => '/bin/bash',
+    password   => '$1$2ytnzzj8$jQpaUPnccZDw2YVpzqzNs/',
+  }
+  group { 'ctcing':
+    ensure => 'present',
+    gid    => '501',
+  }
 
   # ::x11
   package {['xorg-x11-server-Xorg', 'xorg-x11-apps', 'xorg-x11-xinit', 'xterm']:
@@ -37,9 +48,9 @@ class profile::tce_solo {
     ensure => present,
   }
 
-  include ::x11vnc
 
   include ::incron
+
   # ::swaks
   package {'swaks':
     ensure => installed,
@@ -48,6 +59,15 @@ class profile::tce_solo {
   package {'zenity':
     ensure => installed,
   }
+
+  include ::x11vnc
+
+  include ::metro
+  include ::metro::xsession
+  include ::metro::xresources
+  include ::metro::misc::xlinks
+  include ::metro::misc::fonts
+  include ::metro::sico::keys
 
   include ::metro::misc::compruebalogin
   include ::metro::misc::finsesion
