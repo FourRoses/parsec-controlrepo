@@ -75,6 +75,50 @@ class profile::tce_solo {
     ensure => present,
   }
 
+  # ::gdm
+  package {'gdm':
+    ensure => installed,
+  }
+  file { '/etc/gdm/custom.conf' :
+    ensure  => present,
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0644',
+    content => template('metro/custom.conf.erb'),
+  }
+
+  # ::pexserver
+  package {'sico-pexserver-sivtce':
+    ensure => latest,
+  } ->
+  file {'/usr/local/sico/lib/libXm.so.2':
+    ensure => link,
+    target => '/usr/X11R6/lib/libXm.so.2',
+  } ->
+  file {'/usr/local/sico/pexserver/functions':
+    ensure  => present,
+    mode    => '0755',
+    source  => 'puppet:///data/poi/common/usr/local/sico/pexserver/functions',
+  } ->
+  file {'/etc/init.d/SicoPexServer':
+    ensure  => present,
+    mode    => '0755',
+    source  => 'puppet:///data/poi/common/etc/init.d/SicoPexServer',
+  } ->
+  service {'SicoPexServer':
+    ensure     => running,
+    enable     => true,
+    hasstatus  => true,
+    hasrestart => false,
+  }
+
+  # ::openmotif
+  package {'openmotif':
+    ensure => present,
+  }
+  package {'openmotif22':
+    ensure => present,
+  }
 
   include ::incron
 
