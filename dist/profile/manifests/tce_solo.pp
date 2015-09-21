@@ -1,5 +1,12 @@
 class profile::tce_solo {
 
+  yumrepo {'poi':
+    ensure   => present,
+    baseurl  => 'http://16.0.96.20/repo/poi',
+    gpgcheck => '0',
+    descr    => 'Metro POIs',
+  }
+
   # ::metro
   user {'opermm':
     ensure     => 'present',
