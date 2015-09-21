@@ -7,6 +7,26 @@ class profile::tce_solo {
     descr    => 'Metro POIs',
   }
 
+  # ::interfaces
+  class { 'network':
+    config_file_notify => '',
+  }
+
+  network::interface { $::foreman_interfaces[0][identifier]:
+    ipaddress => $::foreman_interfaces[0][ip],
+    netmask   => $::foreman_interfaces[0][subnet][mask],
+    hwaddr    => $::foreman_interfaces[0][mac],
+    gateway   => regsubst($::foreman_interfaces[0][ip], '^(\d+\.\d+\.\d+)\.\d+$', '\1.1')
+  }
+
+  if $::foreman_interfaces[1] {
+    network::interface { $::foreman_interfaces[1][identifier]:
+      ipaddress => $::foreman_interfaces[1][ip],
+      netmask   => $::foreman_interfaces[1][subnet][mask],
+      hwaddr    => $::foreman_interfaces[1][mac],
+    }
+  }
+
   # ::metro
   user {'opermm':
     ensure     => 'present',
