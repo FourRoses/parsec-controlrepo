@@ -2,7 +2,7 @@
 profile::poi::apps : ['ctc', 'xpostit']
 
 metro::ctc::monitor : ['0', '1', '2']
-metro::ctc::rol : 'operador'
+metro::ctc::rol : 'observador'
 metro::ctc::tel : false
 
 metro::xpostit::monitor : ['0', '1', '2']
