@@ -14,4 +14,4 @@ metro::isacd::rol     :
     crp : '4x2'
 
 x11::conf_content : 'metro/poi/xorg.conf.op55_mm.erb'
-nvidia::version : '173xx'
+nvidia::version : '304xx-PAE'
