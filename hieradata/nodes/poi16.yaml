@@ -1,5 +1,5 @@
 ---
-profile::poi::apps : ['ctc', 'xpostit', 'igcamaras', 'ats']
+profile::poi::apps : ['ctc', 'xpostit', 'igcamaras', 'ats', 'vncpogui']
 
 metro::ctc::monitor : ['0', '1']
 metro::ctc::rol : 'supervisor'
@@ -13,3 +13,6 @@ metro::tn::monitor : '0'
 metro::tn::rol : 'supervisor'
 
 metro::igcamaras::monitor : '0'
+
+metro::vncpogui::monitor : '2'
+elotouch::monitor : '2'
