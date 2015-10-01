@@ -1,0 +1,16 @@
+---
+profile::poi::apps : ['tce', 'isacd']
+
+metro::tce::client::monitor : '0'
+metro::tce::client::id      : '67'
+metro::tce::client::server  : ['CentralTCE', 'CentralPCI', 'CentralSIV1']
+metro::tce::client::rol     : 'operador'
+metro::tce::client::ctc_server : 'SIVBROKER1'
+
+metro::isacd::monitor : '0'
+metro::isacd::rol     :
+  estaciones-pac :
+    crp : '4x2'
+
+x11::conf_content : 'metro/poi/xorg.conf.op67.erb'
+nvidia::version : '304xx-PAE'
