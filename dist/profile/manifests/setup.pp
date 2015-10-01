@@ -20,12 +20,12 @@ class profile::setup {
       descr   => "CentOS-${facts['operatingsystemmajrelease']} - Updates",
     }
     yumrepo { 'puppetlabs':
-      baseurl  => 'http://16.0.96.20:3142/yum.puppetlabs.com/el/$releasever/products/$basearch',
+      baseurl  => 'http://16.0.96.20/repo/yum.puppetlabs.com/el/$releasever/products/$basearch',
       descr    => 'PuppetLabs Products',
       gpgcheck => '0'
     }
     yumrepo { 'puppetlabs-deps':
-      baseurl  => 'http://16.0.96.20:3142/yum.puppetlabs.com/el/$releasever/dependencies/$basearch',
+      baseurl  => 'http://16.0.96.20/repo/yum.puppetlabs.com/el/$releasever/dependencies/$basearch',
       descr    => 'PuppetLabs Dependencies',
       gpgcheck => '0'
     }
