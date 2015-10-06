@@ -2,3 +2,4 @@
 metro::tce::uis_ip : '17.138.58.64'
 metro::tce::cancela : 'schneider'
 metro::tce::mbt : false
+metro::tce::plano : false
