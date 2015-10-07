@@ -1,5 +1,5 @@
 class profile::sivestacion {
-  #class {'::metro::siv::estacion': } ->
+  class {'::metro::siv::estacion': } ->
 
   class {'::snmp':
     agentaddress      => hiera('snmp::agentaddress'),
