@@ -3,7 +3,6 @@ estacion: lago
 router: 
 reboot: 36.141.49.225
 maestra: 36.141.14.63
-megafonia: 
 tce: lago
 uis: 
   EL:
@@ -15,10 +14,10 @@ uis:
         tipo: CARTEL_MP
         tty: '13'
       L10Anden02:
-        puerto: '15'
+        puerto: '13'
         caras: [2,4,6,8]
         tipo: CARTEL_MP
-        tty: '16'
+        tty: '14'
       L10Vest01:
         puerto: '14'
         caras: [1,2]

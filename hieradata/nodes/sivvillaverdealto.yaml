@@ -9,11 +9,6 @@ uis:
   1V:
     ip: 20.210.58.10
     carteles:
-#      CartelPAV01:
-#        puerto: '12'
-#        caras: [1]
-#        tipo: CARTEL_MP
-#        tty: '17'
   EL:
     ip: 20.210.49.12
     carteles:

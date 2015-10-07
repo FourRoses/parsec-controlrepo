@@ -21,7 +21,7 @@ uis:
         tty: '14'
       L05Vest01:
         puerto: '14'
-        caras: [1,2,3,4]
+        caras: [1,2,4]
         tipo: CARTEL_MP
         tty: '15'
 #      L05Vest02:
@@ -39,7 +39,7 @@ uis:
         tty: '17'
 #      CartelPAV02:
 #        puerto: '13'
-#        caras: []
+#        caras: [1]
 #        tipo: CARTEL_MP
 #        tty: '18'
 arcom: 

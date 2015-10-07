@@ -2,6 +2,7 @@
 estacion: pavones
 router: 36.82.49.1
 reboot: 36.82.49.225
+megafonia: 36.82.49.8
 tce: pavones
 uis: 
   EL:

@@ -1,0 +1,25 @@
+---
+estacion: cipriano
+router: 36.85.49.1
+reboot: 36.85.49.225
+maestra: 36.85.14.226
+tce: cipriano
+uis: 
+  EL:
+    ip: 36.85.49.226
+    carteles:
+      L09Anden01:
+        puerto: '12'
+        caras: [1,3,5,7]
+        tipo: CARTEL_MP
+        tty: '13'
+      L09Anden02:
+        puerto: '13'
+        caras: [2,4,6,8]
+        tipo: CARTEL_MP
+        tty: '14'
+      L09Vest01:
+        puerto: '14'
+        caras: [1,2]
+        tipo: CARTEL_MP
+        tty: '15'

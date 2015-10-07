@@ -32,10 +32,10 @@ uis:
     ip: 37.18.58.10
     carteles:
       CartelPAV:
-        puerto: '12'
+        puerto: '13'
         caras: [1]
         tipo: CARTEL_MP
-        tty: '17'
+        tty: '18'
 arcom: 
   '1':
     ip: 37.18.22.10

@@ -1,0 +1,54 @@
+---
+estacion: operaR
+router: 16.137.49.1
+reboot: 16.137.49.227
+tce: opera
+uis: 
+  EL:
+    ip: 16.137.49.13
+    carteles:
+      L50Anden01:
+        puerto: '13'
+        caras: [1,3]
+        tipo: CARTEL_MP
+        tty: '14'
+      TeleAsc01_P1:
+        puerto: '01'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '02'
+      TeleAsc01_P2:
+        puerto: '02'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '03'
+      TeleAsc02_P1:
+        puerto: '03'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '04'
+      TeleAsc02_P2:
+        puerto: '04'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '05'
+      TeleAsc02_P3:
+        puerto: '05'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '06'
+      TeleAsc03_P1:
+        puerto: '06'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '07'
+      TeleAsc03_P2:
+        puerto: '07'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '08'
+      TeleAsc03_P3:
+        puerto: '08'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '09'

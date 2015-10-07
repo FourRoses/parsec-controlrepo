@@ -1,0 +1,85 @@
+---
+estacion: usera
+router: 17.134.49.1
+maestra: 17.134.14.68
+megafonia: 17.134.49.8
+tce: usera
+sondas: 
+  ig_vestibulo: 17.134.58.225
+  ig_anden: 17.134.58.226
+uis: 
+  3V:
+    ip: 17.134.70.63
+    carteles:
+      TeleAsc06_P1:
+        puerto: '08'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '73'
+      TeleAsc05_P1:
+        puerto: '06'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '71'
+      TeleAsc06_P2:
+        puerto: '09'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '74'
+      TeleAsc05_P2:
+        puerto: '07'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '72'
+  1V:
+    ip: 17.134.58.63
+    carteles:
+      TeleAsc03_P1:
+        puerto: '09'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '42'
+      TeleAsc04_P2:
+        puerto: '05'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '38'
+      TeleAsc02_P1:
+        puerto: '03'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '20'
+      TeleAsc03_P2:
+        puerto: '10'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '43'
+      TeleAsc02_P2:
+        puerto: '06'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '39'
+      TeleAsc01_P1:
+        puerto: '01'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '18'
+      TeleAsc01_P2:
+        puerto: '02'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '19'
+      TeleAsc04_P1:
+        puerto: '04'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '37'
+cartel_ip: 
+  L06Anden01:
+    ips:
+      - 17.134.49.60
+      - 17.134.49.62
+  L06Anden02:
+    ips:
+      - 17.134.49.61
+      - 17.134.49.63

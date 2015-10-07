@@ -1,0 +1,24 @@
+---
+estacion: odonell
+router: 35.141.49.1
+megafonia: 35.141.49.8
+tce: odonnell
+sondas: 
+  ig_vestibulo: 35.141.58.225
+  ig_anden: 35.141.58.226
+#uis: 
+#  1V:
+#    ip: 18.199.58.13
+#    carteles:
+#  EL:
+#    ip: 18.199.49.10
+#    carteles:
+cartel_ip: 
+  L06Anden01:
+    ips:
+      - 35.141.49.60
+      - 35.141.49.62
+  L06Anden02:
+    ips:
+      - 35.141.49.61
+      - 35.141.49.63

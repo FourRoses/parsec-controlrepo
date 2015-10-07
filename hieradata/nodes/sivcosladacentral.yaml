@@ -39,7 +39,7 @@ uis:
 #        tty: '16'
 arcom: 
   '1':
-    ip: 
+    ip: 37.133.14.12
     cartel: TeleCancela01
     puerto: 29001
     tty: 21

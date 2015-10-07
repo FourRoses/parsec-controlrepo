@@ -34,8 +34,8 @@ uis:
         caras: [1,2]
         tipo: CARTEL_MP
         tty: '15'
-      L01Vest02:
-        puerto: '15'
-        caras: [1,2]
-        tipo: CARTEL_MP
-        tty: '16'
+#      L01Vest02:
+#        puerto: '15'
+#        caras: [1,2]
+#        tipo: CARTEL_MP
+#        tty: '16'

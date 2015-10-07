@@ -1,0 +1,27 @@
+---
+estacion: virgencortijo
+router: 12.67.49.1
+reboot: 12.67.49.11
+maestra: 12.67.14.17
+megafonia: 12.67.49.13
+tce: virgencortijo
+uis:
+  EL:
+    ip: 12.67.49.12
+    carteles:
+      L51Anden01:
+        puerto: '12'
+        caras: [5,7]
+        tipo: CARTEL_MP
+        tty: '13'
+      L51Anden02:
+        puerto: '13'
+        caras: [6,8]
+        tipo: CARTEL_MP
+        tty: '14'
+arcom:
+  '1':
+    ip: 12.67.14.15
+    cartel: TeleCancela01
+    puerto: 29001
+    tty: 21

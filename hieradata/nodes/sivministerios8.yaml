@@ -93,7 +93,7 @@ arcom:
     puerto: 29005
     tty: 25
   '3':
-    ip: 
+    ip: 18.2.14.92
     cartel: TeleCancela06
     puerto: 29006
     tty: 26

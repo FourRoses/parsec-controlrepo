@@ -53,7 +53,7 @@ arcom:
     puerto: 29002
     tty: 22
   '3':
-    ip: 
+    ip: 18.2.14.140
     cartel: TeleCancela03
     puerto: 29003
     tty: 23

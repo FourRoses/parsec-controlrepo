@@ -11,10 +11,10 @@ uis:
     ip: 16.69.58.63
     carteles:
       CartelPAV01:
-        puerto: '12'
+        puerto: '13'
         caras: [1]
         tipo: CARTEL_MP
-        tty: '17'
+        tty: '18'
   EL:
     ip: 16.69.49.63
     carteles:

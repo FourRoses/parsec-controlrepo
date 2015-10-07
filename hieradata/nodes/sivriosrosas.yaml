@@ -1,0 +1,41 @@
+---
+estacion: riosrosas
+router: 16.71.49.1
+reboot: 16.71.49.61
+megafonia: 16.71.49.41
+tce: riosrosas
+sondas: 
+  ig_vestibulo: 16.71.58.225
+  ig_anden: 16.71.58.226
+uis: 
+  1V:
+    ip: 16.71.58.62
+    carteles:
+      CartelPAV01:
+        puerto: '12'
+        caras: [1]
+        tipo: CARTEL_MP
+        tty: '17'
+  EL:
+    ip: 16.71.49.62
+    carteles:
+      L01Anden01:
+        puerto: '12'
+        caras: [1,3,5,7]
+        tipo: CARTEL_MP
+        tty: '13'
+      L01Anden02:
+        puerto: '13'
+        caras: [2,4,6,8]
+        tipo: CARTEL_MP
+        tty: '14'
+      L01Vest01:
+        puerto: '14'
+        caras: [1,2]
+        tipo: CARTEL_MP
+        tty: '15'
+      L01Vest02:
+        puerto: '15'
+        caras: [1,2]
+        tipo: CARTEL_MP
+        tty: '16'
