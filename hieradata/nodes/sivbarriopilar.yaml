@@ -1,0 +1,30 @@
+---
+estacion: barriopilar
+router: 49.100.63.98
+reboot: 18.66.49.225
+megafonia: 18.66.49.8
+tce: barriopilar
+uis: 
+  EL:
+    ip: 18.66.49.226
+    carteles:
+      L09Anden01:
+        puerto: '12'
+        caras: [1,3,5,7]
+        tipo: CARTEL_MP
+        tty: '13'
+      L09Anden02:
+        puerto: '13'
+        caras: [2,4,6,8]
+        tipo: CARTEL_MP
+        tty: '14'
+      L09Vest01:
+        puerto: '14'
+        caras: [1,2]
+        tipo: CARTEL_MP
+        tty: '15'
+      L09Vest02:
+        puerto: '15'
+        caras: [1,2]
+        tipo: CARTEL_MP
+        tty: '16'

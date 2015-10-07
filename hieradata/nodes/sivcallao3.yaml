@@ -1,0 +1,70 @@
+---
+estacion: callao3
+router: 16.199.49.1
+reboot: 16.199.49.225
+maestra: 16.199.14.227
+megafonia: 16.199.49.10
+tce: callao
+siv: 
+  - sivcallao
+uis: 
+  1V:
+    ip: 16.199.58.225
+    carteles:
+      CartelPAV01:
+        puerto: '12'
+        caras: [1]
+        tipo: CARTEL_MP
+        tty: '17'
+  2V:
+    ip: 16.199.58.228
+    carteles:
+      CartelPAV02:
+        puerto: '12'
+        caras: [1]
+        tipo: CARTEL_MP
+        tty: '18'
+  EL:
+    ip: 16.199.49.226
+    carteles:
+      L03Anden01:
+        puerto: '12'
+        caras: [1,3,5,7]
+        tipo: CARTEL_MP
+        tty: '13'
+      L03Anden02:
+        puerto: '13'
+        caras: [2,4,6,8]
+        tipo: CARTEL_MP
+        tty: '14'
+      L03Vest01:
+        puerto: '14'
+        caras: [1,2]
+        tipo: CARTEL_MP
+        tty: '15'
+      L03Vest02:
+        puerto: '15'
+        caras: [1,2]
+        tipo: CARTEL_MP
+        tty: '16'
+arcom: 
+  '1':
+    ip: 16.199.14.43
+    cartel: TeleCancela01
+    puerto: 29001
+    tty: 21
+  '2':
+    ip: 16.199.14.44
+    cartel: TeleCancela02
+    puerto: 29002
+    tty: 22
+  '3':
+    ip: 16.199.14.45
+    cartel: TeleCancela03
+    puerto: 29003
+    tty: 23
+  '4':
+    ip: 16.199.14.252
+    cartel: TeleCancela04
+    puerto: 29004
+    tty: 24

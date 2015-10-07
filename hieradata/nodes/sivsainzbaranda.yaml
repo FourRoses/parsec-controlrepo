@@ -1,0 +1,32 @@
+---
+estacion: sainzbaranda
+router: 36.78.49.1
+tce: sainzbaranda
+sondas: 
+  ig_tunel1: 36.78.58.233
+  ig_anden: 36.78.58.231
+  ig_vestibulo: 36.78.58.237
+siv: 
+  - sivsainzbaranda9
+uis: 
+  1V:
+    ip: 36.78.58.226
+    carteles:
+      CartelPAV01:
+        puerto: '12'
+        caras: [1]
+        tipo: CARTEL_MP
+        tty: '17'
+cartel_ip: 
+  L06Anden01:
+    ips:
+      - 36.78.49.60
+      - 36.78.49.62
+      - 36.78.49.64
+      - 36.78.49.66
+  L06Anden02:
+    ips:
+      - 36.78.49.61
+      - 36.78.49.63
+      - 36.78.49.65
+      - 36.78.49.67

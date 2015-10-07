@@ -1,0 +1,24 @@
+---
+estacion: mendez
+router: 17.137.49.1
+megafonia: 17.137.49.8
+tce: mendez
+sondas: 
+  ig_vestibulo: 17.137.58.225
+  ig_anden: 17.137.58.226
+uis: 
+  1V:
+    ip: 18.199.58.13
+    carteles:
+  EL:
+    ip: 18.199.49.10
+    carteles:
+cartel_ip: 
+  L06Anden01:
+    ips:
+      - 17.137.49.61
+      - 17.137.49.63
+  L06Anden02:
+    ips:
+      - 17.137.49.62
+      - 17.137.49.64

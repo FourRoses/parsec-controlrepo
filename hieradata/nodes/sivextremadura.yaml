@@ -1,0 +1,17 @@
+---
+estacion: extremadura
+router: 17.155.49.1
+megafonia: 17.155.49.8
+tce: extremadura
+sondas: 
+  ig_vestibulo: 17.155.58.225
+  ig_anden: 17.155.58.226
+cartel_ip: 
+  L06Anden01:
+    ips:
+      - 17.155.49.60
+      - 17.155.49.62
+  L06Anden02:
+    ips:
+      - 17.155.49.61
+      - 17.155.49.63

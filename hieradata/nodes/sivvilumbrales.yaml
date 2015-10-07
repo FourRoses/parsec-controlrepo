@@ -1,0 +1,17 @@
+---
+estacion: vilumbrales
+router: 36.146.49.1
+maestra: 36.146.14.27
+megafonia: 36.146.49.8
+tce: vilumbrales
+arcom: 
+  '1':
+    ip: 65160
+    cartel: TeleCancela01
+    puerto: 29001
+    tty: 21
+  '2':
+    ip: 65160
+    cartel: TeleCancela02
+    puerto: 29002
+    tty: 22

@@ -1,0 +1,89 @@
+---
+estacion: pacifico1
+router: 17.138.49.1
+megafonia: 17.138.49.73
+tce: pacifico
+sondas: 
+  ig_exterior: 17.138.58.228
+  ig_vestibulo: 17.138.58.225
+  ig_anden: 17.138.58.226
+siv: 
+  - sivpacifico
+uis: 
+  1V:
+    ip: 17.138.58.69
+    carteles:
+      CartelPAV01:
+        puerto: '12'
+        caras: [1]
+        tipo: CARTEL_MP
+        tty: '17'
+      TeleAsc01_P1:
+        puerto: '06'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '37'
+      TeleAsc01_P2:
+        puerto: '07'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '38'
+      TeleAsc02_P1:
+        puerto: '08'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '39'
+      TeleAsc02_P2:
+        puerto: '02'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '33'
+      TeleAsc03_P1:
+        puerto: '10'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '41'
+      TeleAsc03_P2:
+        puerto: '11'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '42'
+  EL:
+    ip: 17.138.49.71
+    carteles:
+      L01Anden01:
+        puerto: '12'
+        caras: [1,3,5,7]
+        tipo: CARTEL_MP
+        tty: '13'
+      L01Anden02:
+        puerto: '13'
+        caras: [2,4,6,8]
+        tipo: CARTEL_MP
+        tty: '14'
+      L01Vest01:
+        puerto: '14'
+        caras: [1,2]
+        tipo: CARTEL_MP
+        tty: '15'
+      L01Vest02:
+        puerto: '15'
+        caras: [1,2]
+        tipo: CARTEL_MP
+        tty: '16'
+arcom: 
+  '1':
+    ip: 17.138.14.64
+    cartel: TeleCancela01
+    puerto: 29001
+    tty: 21
+  '2':
+    ip: 17.138.14.63
+    cartel: TeleCancela02
+    puerto: 29002
+    tty: 22
+  '3':
+    ip: 17.138.14.60
+    cartel: TeleCancela03
+    puerto: 29003
+    tty: 23

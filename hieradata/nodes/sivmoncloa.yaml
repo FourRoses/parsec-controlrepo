@@ -1,0 +1,20 @@
+---
+estacion: moncloa
+router: 16.203.49.1
+reboot: 16.203.49.227
+maestra: 16.203.15.225
+tce: moncloa
+sondas: 
+  ig_vestibulo: 16.203.58.227
+  ig_anden: 16.203.58.5
+siv: 
+  - sivmoncloa3
+cartel_ip: 
+  L06Anden01:
+    ips:
+      - 16.203.49.61
+      - 16.203.49.63
+  L06Anden02:
+    ips:
+      - 16.203.49.62
+      - 16.203.49.64

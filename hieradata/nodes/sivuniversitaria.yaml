@@ -1,0 +1,41 @@
+---
+estacion: universitaria
+router: 35.150.49.1
+megafonia: 35.150.49.8
+tce: universitaria
+sondas: 
+  ig_vestibulo: 35.150.58.225
+  ig_anden: 35.150.58.226
+uis: 
+  1V:
+    ip: 35.150.58.62
+    carteles:
+      TeleAsc02_P1:
+        puerto: '02'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '33'
+      TeleAsc02_P2:
+        puerto: '03'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '34'
+      TeleAsc03_P1:
+        puerto: '08'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '39'
+      TeleAsc03_P2:
+        puerto: '09'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '40'
+cartel_ip: 
+  L06Anden01:
+    ips:
+      - 35.150.49.60
+      - 35.150.49.62
+  L06Anden02:
+    ips:
+      - 35.150.49.61
+      - 35.150.49.63

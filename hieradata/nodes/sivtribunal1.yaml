@@ -1,0 +1,43 @@
+---
+estacion: tribunal1
+router: 18.138.49.1
+megafonia: 18.138.49.41
+tce: tribunal
+sondas: 
+  ig_tunel1: 18.138.58.229
+  ig_anden: 18.138.58.230
+  ig_vestibulo: 18.138.58.228
+siv: 
+  - sivtribunal10
+uis: 
+  1V:
+    ip: 18.138.58.67
+    carteles:
+      CartelPAV01:
+        puerto: '12'
+        caras: [1]
+        tipo: CARTEL_MP
+        tty: '17'
+  EL:
+    ip: 18.138.49.65
+    carteles:
+      L01Anden01:
+        puerto: '12'
+        caras: [1,3,5,7]
+        tipo: CARTEL_MP
+        tty: '13'
+      L01Anden02:
+        puerto: '13'
+        caras: [2,4,6,8]
+        tipo: CARTEL_MP
+        tty: '14'
+      L01Vest01:
+        puerto: '14'
+        caras: [1]
+        tipo: CARTEL_MP
+        tty: '15'
+      L01Vest02:
+        puerto: '15'
+        caras: [1,2]
+        tipo: CARTEL_MP
+        tty: '16'

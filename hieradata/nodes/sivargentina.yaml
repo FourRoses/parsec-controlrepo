@@ -1,0 +1,17 @@
+---
+estacion: argentina
+router: 35.145.49.1
+megafonia: 35.145.49.8
+tce: argentina
+sondas: 
+  ig_vestibulo: 35.145.58.225
+  ig_anden: 35.145.58.226
+cartel_ip: 
+  L06Anden01:
+    ips:
+      - 35.145.49.60
+      - 35.145.49.62
+  L06Anden02:
+    ips:
+      - 35.145.49.61
+      - 35.145.49.63

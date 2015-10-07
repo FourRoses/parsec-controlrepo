@@ -1,0 +1,90 @@
+---
+estacion: laguna
+router: 17.129.49.1
+megafonia: 17.129.49.8
+tce: laguna
+sondas: 
+  ig_vestibulo: 17.129.58.225
+  ig_anden: 17.129.58.226
+uis: 
+  1V:
+    ip: 17.129.58.64
+    carteles:
+      TeleAsc01_P1:
+        puerto: '12'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '43'
+      TeleAsc01_P2:
+        puerto: '13'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '44'
+      TeleAsc01_P3:
+        puerto: '00'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '31'
+      TeleAsc02_P1:
+        puerto: '15'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '46'
+      TeleAsc02_P2:
+        puerto: '01'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '32'
+      TeleAsc02_P3:
+        puerto: '02'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '33'
+      TeleAsc03_P1:
+        puerto: '03'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '34'
+      TeleAsc03_P2:
+        puerto: '04'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '35'
+      TeleAsc03_P3:
+        puerto: '05'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '36'
+      TeleAsc04_P1:
+        puerto: '06'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '37'
+      TeleAsc04_P2:
+        puerto: '08'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '39'
+      TeleAsc05_P1:
+        puerto: '09'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '40'
+      TeleAsc05_P2:
+        puerto: '10'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '41'
+cartel_ip: 
+  L06Anden01:
+    ips:
+      - 17.129.49.69
+      - 17.129.49.70
+      - 17.129.49.72
+      - 17.129.49.71
+  L06Anden02:
+    ips:
+      - 17.129.49.73
+      - 17.129.49.74
+      - 17.129.49.75
+      - 17.129.49.76

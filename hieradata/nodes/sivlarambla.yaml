@@ -1,0 +1,45 @@
+---
+estacion: larambla
+router: 37.134.49.1
+reboot: 37.134.49.9
+maestra: 37.134.14.13
+megafonia: 37.134.49.11
+tce: larambla
+uis: 
+  1V:
+    ip: 37.134.58.9
+    carteles:
+      CartelPAV01:
+        puerto: '12'
+        caras: [1]
+        tipo: CARTEL_MP
+        tty: '17'
+  EL:
+    ip: 37.134.49.10
+    carteles:
+      L07Anden01:
+        puerto: '12'
+        caras: [1,5,7,3]
+        tipo: CARTEL_MP
+        tty: '13'
+      L07Anden02:
+        puerto: '13'
+        caras: [2,6,8,4]
+        tipo: CARTEL_MP
+        tty: '14'
+      L07Vest01:
+        puerto: '14'
+        caras: [1,2]
+        tipo: CARTEL_MP
+        tty: '15'
+#      L07Vest02:
+#        puerto: '15'
+#        caras: []
+#        tipo: CARTEL_MP
+#        tty: '16'
+arcom: 
+  '1':
+    ip: 37.134.14.12
+    cartel: TeleCancela01
+    puerto: 29001
+    tty: 21

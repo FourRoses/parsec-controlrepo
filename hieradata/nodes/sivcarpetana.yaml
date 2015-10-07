@@ -1,0 +1,110 @@
+---
+estacion: carpetana
+router: 17.130.49.1
+megafonia: 17.130.49.8
+tce: carpetana
+sondas: 
+  ig_vestibulo: 17.130.58.225
+  ig_anden: 17.130.58.226
+uis: 
+  1V:
+    ip: 17.130.58.63
+    carteles:
+      L06Vest01:
+        puerto: '14'
+        caras: [1,2]
+        tipo: CARTEL_MP
+        tty: '15'
+      CartelPAV01:
+        puerto: '12'
+        caras: [1]
+        tipo: CARTEL_MP
+        tty: '17'
+      TeleAsc01_P1:
+        puerto: '07'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '38'
+      TeleAsc01_P2:
+        puerto: '13'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '19'
+      TeleAsc05_P1:
+        puerto: '01'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '32'
+      TeleAsc05_P2:
+        puerto: '06'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '37'
+      TeleAsc06_P1:
+        puerto: '03'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '34'
+      TeleAsc06_P2:
+        puerto: '08'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '39'
+  2V:
+    ip: 17.130.58.9
+    carteles:
+      L06Vest02:
+        puerto: '14'
+        caras: [1]
+        tipo: CARTEL_MP
+        tty: '16'
+      TeleAsc02_P1:
+        puerto: '08'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '49'
+      TeleAsc02_P2:
+        puerto: '12'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '18'
+      TeleAsc03_P1:
+        puerto: '06'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '47'
+      TeleAsc03_P2:
+        puerto: '03'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '44'
+      TeleAsc04_P1:
+        puerto: '01'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '42'
+      TeleAsc04_P2:
+        puerto: '13'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '20'
+arcom: 
+  '1':
+    ip: 17.130.14.61
+    cartel: TeleCancela01
+    puerto: 29001
+    tty: 21
+  '2':
+    ip: 17.130.14.16
+    cartel: TeleCancela02
+    puerto: 29002
+    tty: 22
+cartel_ip: 
+  L06Anden01:
+    ips:
+      - 17.130.49.60
+      - 17.130.49.62
+  L06Anden02:
+    ips:
+      - 17.130.49.61
+      - 17.130.49.63

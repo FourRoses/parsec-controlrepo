@@ -1,0 +1,70 @@
+---
+estacion: pacolucia
+router: 18.99.49.1
+reboot: 18.99.49.10
+maestra: 18.99.14.10
+megafonia: 18.99.49.11
+tce: pacolucia
+uis: 
+  1V:
+    ip: 18.99.58.13
+    carteles:
+      CartelPAV01:
+        puerto: '12'
+        caras: [1]
+        tipo: CARTEL_MP
+        tty: '17'
+      TeleAsc01_P1:
+        puerto: '13'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '44'
+      TeleAsc01_P2:
+        puerto: '02'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '33'
+      TeleAsc02_P1:
+        puerto: '03'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '34'
+      TeleAsc02_P2:
+        puerto: '04'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '35'
+  EL:
+    ip: 18.99.49.9
+    carteles:
+      L09Anden01:
+        puerto: '12'
+        caras: [1,3,5,7]
+        tipo: CARTEL_MP
+        tty: '13'
+      L09Anden02:
+        puerto: '13'
+        caras: [2,4,6,8]
+        tipo: CARTEL_MP
+        tty: '14'
+      L09Vest01:
+        puerto: '14'
+        caras: [1,2]
+        tipo: CARTEL_MP
+        tty: '15'
+      TeleAsc03_P1:
+        puerto: '02'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '03'
+      TeleAsc03_P2:
+        puerto: '03'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '04'
+arcom: 
+  '1':
+    ip: 18.99.14.18
+    cartel: TeleCancela01
+    puerto: 29001
+    tty: 21

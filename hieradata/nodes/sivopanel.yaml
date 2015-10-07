@@ -1,0 +1,21 @@
+---
+estacion: opanel
+router: 17.132.49.1
+megafonia: 17.132.49.8
+tce: opanel
+sondas: 
+  ig_vestibulo: 17.132.58.225
+  ig_anden: 17.132.58.226
+uis: 
+  EL:
+    ip: 49.4.63.226
+    carteles:
+cartel_ip: 
+  L06Anden01:
+    ips:
+      - 17.132.49.60
+      - 17.132.49.62
+  L06Anden02:
+    ips:
+      - 17.132.49.61
+      - 17.132.49.63

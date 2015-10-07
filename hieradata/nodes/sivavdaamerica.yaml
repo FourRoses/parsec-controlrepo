@@ -1,0 +1,25 @@
+---
+estacion: avdaamerica
+router: 18.74.49.1
+tce: avdaamerica4
+sondas: 
+  ig_exterior: 18.74.58.231
+  ig_vestibulo: 18.74.58.226
+  ig_anden: 18.74.58.227
+siv: 
+  - sivavdaamerica4
+  - sivavdaamerica7
+  - sivavdaamerica9
+cartel_ip: 
+  L06Anden01:
+    ips:
+      - 18.74.49.72
+      - 18.74.49.74
+      - 18.74.49.76
+      - 18.74.49.78
+  L06Anden02:
+    ips:
+      - 18.74.49.73
+      - 18.74.49.75
+      - 18.74.49.77
+      - 18.74.49.79

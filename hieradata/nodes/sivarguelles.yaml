@@ -1,0 +1,20 @@
+---
+estacion: arguelles
+router: 16.202.49.1
+maestra: 16.202.58.225
+tce: arguelles
+sondas: 
+  ig_vestibulo: 16.202.58.241
+  ig_anden: 16.202.58.242
+siv: 
+  - sivarguelles3
+  - sivarguelles4
+cartel_ip: 
+  L06Anden01:
+    ips:
+      - 16.202.49.61
+      - 16.202.49.63
+  L06Anden02:
+    ips:
+      - 16.202.49.62
+      - 16.202.49.64

@@ -1,0 +1,19 @@
+---
+estacion: diegoleon
+router: 17.73.49.1
+tce: diegoleon5
+sondas: 
+  ig_vestibulo: 17.73.58.11
+  ig_anden: 17.73.58.8
+siv: 
+  - sivdiegoleon4
+  - sivdiegoleon5
+cartel_ip: 
+  L06Anden01:
+    ips:
+      - 17.73.49.64
+      - 17.73.49.66
+  L06Anden02:
+    ips:
+      - 17.73.49.65
+      - 17.73.49.67

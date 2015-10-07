@@ -1,0 +1,57 @@
+---
+estacion: condecasal
+router: 35.139.49.1
+megafonia: 35.139.49.8
+tce: condecasal
+sondas: 
+  ig_vestibulo: 35.139.58.225
+  ig_anden: 35.139.58.226
+uis: 
+  1V:
+    ip: 18.199.58.13
+    carteles:
+  2V:
+    ip: 35.139.58.68
+    carteles:
+      TeleAsc01_P1:
+        puerto: '12'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '63'
+      TeleAsc01_P2:
+        puerto: '13'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '64'
+      TeleAsc02_P1:
+        puerto: '01'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '52'
+      TeleAsc02_P2:
+        puerto: '02'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '53'
+      TeleAsc03_P1:
+        puerto: '03'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '54'
+      TeleAsc03_P2:
+        puerto: '04'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '55'
+  EL:
+    ip: 18.199.49.10
+    carteles:
+cartel_ip: 
+  L06Anden01:
+    ips:
+      - 35.139.49.60
+      - 35.139.49.62
+  L06Anden02:
+    ips:
+      - 35.139.49.61
+      - 35.139.49.63

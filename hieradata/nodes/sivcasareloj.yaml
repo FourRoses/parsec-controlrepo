@@ -1,0 +1,49 @@
+---
+estacion: casareloj
+router: 19.27.49.1
+maestra: 19.27.14.25
+megafonia: 19.27.49.8
+tce: casareloj
+uis: 
+  EL:
+    ip: 19.27.49.10
+    carteles:
+      L12Anden01:
+        puerto: '13'
+        caras: [1,3,5,7]
+        tipo: CARTEL_MP
+        tty: '02'
+      L12Anden02:
+        puerto: '14'
+        caras: [2,4,6,8]
+        tipo: CARTEL_MP
+        tty: '03'
+      L12Vest01:
+        puerto: '15'
+        caras: [1,2]
+        tipo: CARTEL_MP
+        tty: '04'
+#      L12Vest02:
+#        puerto: '12'
+#        caras: []
+#        tipo: CARTEL_MP
+#        tty: '01'
+  CI:
+    ip: 19.27.58.11
+    carteles:
+      CartelPAV:
+        puerto: '13'
+        caras: [1]
+        tipo: CARTEL_MP
+        tty: '18'
+arcom: 
+  '1':
+    ip: 19.27.14.30
+    cartel: TeleCancela01
+    puerto: 29001
+    tty: 21
+  '2':
+    ip: 19.27.14.31
+    cartel: TeleCancela02
+    puerto: 29002
+    tty: 22

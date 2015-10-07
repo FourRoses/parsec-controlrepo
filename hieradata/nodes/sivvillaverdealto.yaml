@@ -1,0 +1,45 @@
+---
+estacion: villaverdealto
+router: 20.210.49.1
+reboot: 20.210.49.11
+maestra: 20.210.14.16
+megafonia: 20.210.49.13
+tce: villaverdealto
+uis: 
+  1V:
+    ip: 20.210.58.10
+    carteles:
+#      CartelPAV01:
+#        puerto: '12'
+#        caras: [1]
+#        tipo: CARTEL_MP
+#        tty: '17'
+  EL:
+    ip: 20.210.49.12
+    carteles:
+      L03Anden01:
+        puerto: '12'
+        caras: [1,3,5,7]
+        tipo: CARTEL_MP
+        tty: '13'
+      L03Anden02:
+        puerto: '13'
+        caras: [2,4,6,8]
+        tipo: CARTEL_MP
+        tty: '14'
+      L03Vest01:
+        puerto: '14'
+        caras: [1,2]
+        tipo: CARTEL_MP
+        tty: '15'
+#      L03Vest02:
+#        puerto: '15'
+#        caras: []
+#        tipo: CARTEL_MP
+#        tty: '16'
+arcom: 
+  '1':
+    ip: 20.210.14.14
+    cartel: TeleCancela01
+    puerto: 29001
+    tty: 21

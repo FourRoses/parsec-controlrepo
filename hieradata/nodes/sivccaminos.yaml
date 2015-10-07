@@ -1,0 +1,21 @@
+---
+estacion: ccaminos
+router: 16.143.49.1
+reboot: 16.143.49.229
+tce: ccaminos
+sondas: 
+  ig_exterior: 16.143.58.239
+  ig_vestibulo: 16.143.58.235
+  ig_anden: 16.143.58.238
+siv: 
+  - sivccaminos1
+  - sivccaminos2
+cartel_ip: 
+  L06Anden01:
+    ips:
+      - 16.143.49.231
+      - 16.143.49.233
+  L06Anden02:
+    ips:
+      - 16.143.49.230
+      - 16.143.49.232

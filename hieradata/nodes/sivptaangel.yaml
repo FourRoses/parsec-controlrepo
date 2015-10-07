@@ -1,0 +1,17 @@
+---
+estacion: ptaangel
+router: 17.154.49.1
+megafonia: 17.154.49.8
+tce: puertaangel
+sondas: 
+  ig_vestibulo: 17.154.58.225
+  ig_anden: 17.154.58.226
+cartel_ip: 
+  L06Anden01:
+    ips:
+      - 17.154.49.60
+      - 17.154.49.62
+  L06Anden02:
+    ips:
+      - 17.154.49.61
+      - 17.154.49.63

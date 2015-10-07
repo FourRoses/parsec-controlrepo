@@ -1,0 +1,58 @@
+---
+estacion: principepio
+router: 36.140.49.1
+megafonia: 36.140.49.11
+tce: principepio
+sondas: 
+  ig_tunel1: 36.140.58.231
+  ig_anden: 36.140.58.226
+  ig_vestibulo: 36.140.58.232
+siv: 
+  - sivprincipepio10
+  - sivppepioR
+uis: 
+  1V:
+    ip: 36.140.58.65
+    carteles:
+#      TeleAsc03_P1:
+#        puerto: '12'
+#        caras: [20]
+#        tipo: CARTEL_ALBA
+#        tty: '43'
+#      TeleAsc03_P2:
+#        puerto: '13'
+#        caras: [20]
+#        tipo: CARTEL_ALBA
+#        tty: '44'
+  2V:
+    ip: 36.140.58.72
+    carteles:
+#      TeleAsc01_P1:
+#        puerto: '12'
+#        caras: [20]
+#        tipo: CARTEL_ALBA
+#        tty: '63'
+#      TeleAsc01_P2:
+#        puerto: '13'
+#        caras: [20]
+#        tipo: CARTEL_ALBA
+#        tty: '64'
+#      TeleAsc02_P1:
+#        puerto: '01'
+#        caras: [20]
+#        tipo: CARTEL_ALBA
+#        tty: '52'
+#      TeleAsc02_P2:
+#        puerto: '02'
+#        caras: [20]
+#        tipo: CARTEL_ALBA
+#        tty: '53'
+cartel_ip: 
+  L06Anden01:
+    ips:
+      - 36.140.49.60
+      - 36.140.49.62
+  L06Anden02:
+    ips:
+      - 36.140.49.61
+      - 36.140.49.63

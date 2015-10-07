@@ -1,0 +1,116 @@
+---
+estacion: sol1
+router: 
+reboot: 16.198.49.228
+maestra: 16.198.14.45
+tce: sol
+sondas: 
+  ig_vestibulo: 16.198.58.230
+  ig_anden: 16.198.58.227
+  ig_exterior: 16.198.58.231
+siv: 
+  - sivsol2
+  - sivsol3
+uis: 
+  1V:
+    ip: 16.198.58.232
+    carteles:
+  2V:
+    ip: 16.198.58.226
+    carteles:
+      TeleAsc06_P1:
+        puerto: '01'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '52'
+      TeleAsc06_P2:
+        puerto: '02'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '53'
+  3V:
+    ip: 16.198.58.229
+    carteles:
+      TeleAsc01_P1:
+        puerto: '01'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '72'
+      TeleAsc01_P2:
+        puerto: '06'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '77'
+      TeleAsc02_P1:
+        puerto: '08'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '79'
+      TeleAsc02_P2:
+        puerto: '10'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '81'
+      TeleAsc02_P3:
+        puerto: '13'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '84'
+      TeleAsc03_P1:
+        puerto: '05'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '76'
+      TeleAsc03_P2:
+        puerto: '03'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '74'
+      TeleAsc03_P3:
+        puerto: '12'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '83'
+      TeleAsc04_P1:
+        puerto: '02'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '73'
+      TeleAsc04_P2:
+        puerto: '04'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '75'
+      TeleAsc05_P1:
+        puerto: '07'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '78'
+      TeleAsc05_P2:
+        puerto: '11'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '82'
+  EL:
+    ip: 16.198.49.227
+    carteles:
+      L01Anden01:
+        puerto: '12'
+        caras: [1,3,5,7]
+        tipo: CARTEL_MP
+        tty: '13'
+      L01Anden02:
+        puerto: '13'
+        caras: [2,4,6,8]
+        tipo: CARTEL_MP
+        tty: '14'
+      L01Vest01:
+        puerto: '14'
+        caras: [1,2]
+        tipo: CARTEL_MP
+        tty: '15'
+      L01Vest02:
+        puerto: '15'
+        caras: [1,2]
+        tipo: CARTEL_MP
+        tty: '16'

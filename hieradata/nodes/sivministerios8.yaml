@@ -1,0 +1,104 @@
+---
+estacion: ministerios8
+router: 18.2.49.1
+reboot: 18.2.49.71
+maestra: 18.2.14.61
+megafonia: 18.2.49.67
+tce: ministerios
+sondas: 
+  ig_tunel1: 18.2.58.230
+  ig_anden: 18.2.58.228
+  ig_vestibulo: 18.2.58.231
+siv: 
+  - sivministerios
+  - sivministerios10
+uis: 
+  EL:
+    ip: 18.2.49.64
+    carteles:
+      L08Anden01:
+        puerto: '12'
+        caras: [1,3,5,7]
+        tipo: CARTEL_MP
+        tty: '13'
+      L08Anden02:
+        puerto: '13'
+        caras: [2,4,6,8]
+        tipo: CARTEL_MP
+        tty: '14'
+      L08Vest01:
+        puerto: '14'
+        caras: [1,2]
+        tipo: CARTEL_MP
+        tty: '15'
+#      L08Vest02:
+#        puerto: '15'
+#        caras: []
+#        tipo: CARTEL_MP
+#        tty: '16'
+      BajadaL08Anden01:
+        puerto: '05'
+        caras: [1,2]
+        tipo: CARTEL_MP
+        tty: '06'
+      BajadaL08Anden02:
+        puerto: '04'
+        caras: [1,2]
+        tipo: CARTEL_MP
+        tty: '05'
+      MaletRecL08Anden01:
+        puerto: '07'
+        caras: [1]
+        tipo: PORTON
+        tty: '08'
+      MaletAndL08Anden01:
+        puerto: '06'
+        caras: [1]
+        tipo: PORTON
+        tty: '07'
+      SueloL08Anden01:
+        puerto: '09'
+        caras: [1]
+        tipo: PUPITRE_DECISA
+        tty: '10'
+      SueloL08Anden02:
+        puerto: '09'
+        caras: [1]
+        tipo: PUPITRE_DECISA
+        tty: '10'
+arcom: 
+#  '1':
+#    ip: 
+#    cartel: TeleCancela01
+#    puerto: 29001
+#    tty: 21
+#  '1':
+#    ip: 
+#    cartel: TeleCancela02
+#    puerto: 29002
+#    tty: 22
+#  '1':
+#    ip: 
+#    cartel: TeleCancela03
+#    puerto: 29003
+#    tty: 23
+  '1':
+    ip: 18.2.14.91
+    cartel: TeleCancela04
+    puerto: 29004
+    tty: 24
+  '2':
+    ip: 18.2.14.74
+    cartel: TeleCancela05
+    puerto: 29005
+    tty: 25
+  '3':
+    ip: 
+    cartel: TeleCancela06
+    puerto: 29006
+    tty: 26
+  '4':
+    ip: 18.2.14.108
+    cartel: TeleCancela07
+    puerto: 29007
+    tty: 27

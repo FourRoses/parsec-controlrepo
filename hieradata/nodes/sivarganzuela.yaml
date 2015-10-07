@@ -1,0 +1,75 @@
+---
+estacion: arganzuela
+router: 17.136.49.1
+reboot: 17.136.49.64
+maestra: 17.136.14.66
+megafonia: 17.136.49.60
+tce: arganzuela
+uis: 
+  1V:
+    ip: 17.136.58.66
+    carteles:
+      CartelPAV01:
+        puerto: '12'
+        caras: [1]
+        tipo: CARTEL_MP
+        tty: '17'
+#      TeleAsc01_P1:
+#        puerto: '01'
+#        caras: []
+#        tipo: CARTEL_ALBA
+#        tty: '32'
+#      TeleAsc01_P2:
+#        puerto: '02'
+#        caras: []
+#        tipo: CARTEL_ALBA
+#        tty: '33'
+      TeleAsc02_P1:
+        puerto: '04'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '35'
+      TeleAsc02_P2:
+        puerto: '05'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '36'
+      TeleAsc03_P1:
+        puerto: '10'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '41'
+      TeleAsc03_P2:
+        puerto: '11'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '42'
+  EL:
+    ip: 17.136.49.65
+    carteles:
+      L06Anden01:
+        puerto: '12'
+        caras: [1,3,5,7]
+        tipo: CARTEL_MP
+        tty: '13'
+      L06Anden02:
+        puerto: '13'
+        caras: [2,4,6,8]
+        tipo: CARTEL_MP
+        tty: '14'
+      L06Vest01:
+        puerto: '14'
+        caras: [1]
+        tipo: CARTEL_MP
+        tty: '15'
+#      L06Vest02:
+#        puerto: '15'
+#        caras: []
+#        tipo: CARTEL_MP
+#        tty: '16'
+arcom: 
+  '1':
+    ip: 17.136.14.65
+    cartel: TeleCancela01
+    puerto: 29001
+    tty: 21

@@ -1,0 +1,51 @@
+---
+estacion: lucero
+router: 17.156.49.1
+megafonia: 17.156.49.8
+tce: lucero
+sondas: 
+  ig_vestibulo: 17.156.58.225
+  ig_anden: 17.156.58.226
+uis: 
+  1V:
+    ip: 17.156.58.63
+    carteles:
+      TeleAsc01_P1:
+        puerto: '01'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '32'
+      TeleAsc01_P2:
+        puerto: '02'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '33'
+      TeleAsc02_P1:
+        puerto: '03'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '34'
+      TeleAsc02_P2:
+        puerto: '04'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '35'
+      TeleAsc03_P1:
+        puerto: '05'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '36'
+      TeleAsc03_P2:
+        puerto: '06'
+        caras: [20]
+        tipo: CARTEL_ALBA
+        tty: '37'
+cartel_ip: 
+  L06Anden01:
+    ips:
+      - 17.156.49.60
+      - 17.156.49.62
+  L06Anden02:
+    ips:
+      - 17.156.49.61
+      - 17.156.49.63

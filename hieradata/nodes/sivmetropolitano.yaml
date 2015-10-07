@@ -1,0 +1,18 @@
+---
+estacion: metropolitano
+router: 49.100.63.98
+reboot: 49.21.63.225
+megafonia: 35.149.49.8
+tce: metropolitano
+sondas: 
+  ig_vestibulo: 35.149.58.225
+  ig_anden: 35.149.58.226
+cartel_ip: 
+  L06Anden01:
+    ips:
+      - 35.149.49.60
+      - 35.149.49.62
+  L06Anden02:
+    ips:
+      - 35.149.49.61
+      - 35.149.49.63

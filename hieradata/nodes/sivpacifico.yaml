@@ -1,0 +1,23 @@
+---
+estacion: pacifico
+router: 17.138.49.1
+tce: pacifico
+sondas: 
+  ig_exterior: 17.138.58.228
+  ig_vestibulo: 17.138.58.225
+  ig_anden: 17.138.58.227
+siv: 
+  - sivpacifico1
+cartel_ip: 
+  L06Anden01:
+    ips:
+      - 17.138.49.65
+      - 17.138.49.67
+      - 17.138.49.61
+      - 17.138.49.72
+  L06Anden02:
+    ips:
+      - 17.138.49.66
+      - 17.138.49.68
+      - 17.138.49.70
+      - 17.138.49.64

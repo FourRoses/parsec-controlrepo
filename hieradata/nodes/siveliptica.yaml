@@ -1,0 +1,31 @@
+---
+estacion: eliptica
+router: 18.193.49.1
+maestra: 18.193.14.62
+megafonia: 18.193.49.8
+tce: eliptica
+sondas: 
+  ig_vestibulo: 18.193.58.230
+  ig_anden: 18.193.58.231
+siv: 
+  - siveliptica11
+uis: 
+  1V:
+    ip: 18.199.58.13
+    carteles:
+  EL:
+    ip: 18.199.49.10
+    carteles:
+cartel_ip: 
+  L06Anden01:
+    ips:
+      - 18.193.49.60
+      - 18.193.49.62
+      - 18.193.49.67
+      - 18.193.49.66
+  L06Anden02:
+    ips:
+      - 18.193.49.61
+      - 18.193.49.65
+      - 18.193.49.68
+      - 18.193.49.69
