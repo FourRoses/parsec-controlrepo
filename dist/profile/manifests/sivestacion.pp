@@ -53,8 +53,9 @@ class profile::sivestacion {
     gid    => '503',
   }
 
-  package { ['build-essential', "linux-headers-${::kernelrelease}"]: }
-  class { 'dkms': }
+  class { 'dkms':
+    packages_devel => ['build-essential', "linux-headers-${::kernelrelease}"]
+  }
 
   package { 'netcat':
     ensure => installed,
