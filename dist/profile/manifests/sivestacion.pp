@@ -46,6 +46,7 @@ class profile::sivestacion {
     password   => '$1$5rsm.4fQ$VheMuU8NS0GTzoYYpRYLZ0',
     shell      => '/bin/csh',
     managehome => true,
+    require    => Package['tcsh'],
   }
 
   group { 'siv':
