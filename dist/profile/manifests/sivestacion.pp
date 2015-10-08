@@ -16,7 +16,7 @@ class profile::sivestacion {
 
   network::interface { $::foreman_interfaces[0][identifier]:
     ipaddress => $::foreman_interfaces[0][ip],
-    netmask   => $::foreman_interfaces[0][attrs][netmask],
+    netmask   => $::foreman_interfaces[0][subnet][mask],
     gateway   => regsubst($::foreman_interfaces[0][ip], '^(\d+\.\d+\.\d+)\.\d+$', '\1.1')
   }
   udev::rule { '71-persistent-net.rules':
