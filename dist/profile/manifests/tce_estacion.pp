@@ -23,8 +23,8 @@ class profile::tce_estacion {
   include ::motd
 
   file_line { 'auto_home':
-    path   => '/etc/auto_master',
     ensure => 'absent',
+    path   => '/etc/auto_master',
     line   => '/home		auto_home	-nobrowse',
   } ~>
   service { 'svc:/system/filesystem/autofs:default':
@@ -132,13 +132,13 @@ class profile::tce_estacion {
     source => 'puppet:///data/tce_estacion/common/usr/lib/security/pam_allow.so.1',
   }
   file_line { 'pam_unix_cred.so.1':
-    path   => '/etc/pam.conf',
     ensure => 'present',
+    path   => '/etc/pam.conf',
     line   => 'gdm-autologin auth  required    pam_unix_cred.so.1',
   }
   file_line { 'pam_allow.so.1':
-    path   => '/etc/pam.conf',
     ensure => 'present',
+    path   => '/etc/pam.conf',
     line   => 'gdm-autologin auth  sufficient  pam_allow.so.1',
   }
 
@@ -152,8 +152,8 @@ class profile::tce_estacion {
     owner        => 'metro',
     group        => 'nobody',
     sourceselect => all,
-    source       => ["puppet:///data/tce_estacion/nodes/${::hostname}/home/metro/sistema",
-                     'puppet:///data/tce_estacion/common/home/metro/sistema'],
+    source       => [ "puppet:///data/tce_estacion/nodes/${::hostname}/home/metro/sistema",
+                      'puppet:///data/tce_estacion/common/home/metro/sistema' ],
     recurse      => remote,
     replace      => false,
     require      => File_line['auto_home'],
@@ -235,10 +235,10 @@ class profile::tce_estacion {
   }
 
   file { '/etc/inet':
-    ensure => directory,
-    owner  => 'root',
-    group  => 'root',
-    source => "puppet:///data/tce_estacion/nodes/${::hostname}/etc/inet",
+    ensure  => directory,
+    owner   => 'root',
+    group   => 'root',
+    source  => "puppet:///data/tce_estacion/nodes/${::hostname}/etc/inet",
     recurse => remote,
     mode    => '0444',
   }
@@ -311,13 +311,13 @@ class profile::tce_estacion {
   }
 
   file_line { 'controlsico1':
-    path   => '/etc/rpc',
     ensure => 'present',
+    path   => '/etc/rpc',
     line   => 'controlsico1    805306368',
   }
   file_line { 'controlsico2':
-    path   => '/etc/rpc',
     ensure => 'present',
+    path   => '/etc/rpc',
     line   => 'controlsico2    805306369',
   }
   file { '/etc/hosts.equiv':
@@ -345,8 +345,8 @@ class profile::tce_estacion {
     replace => false,
   }
   file_line { 'autologin':
-    path   => '/etc/inittab',
     ensure => 'present',
+    path   => '/etc/inittab',
     line   => 'co:234:respawn:/home/metro/sun/autologin >/dev/null 2>&1 </dev/null',
   }
 
@@ -358,14 +358,14 @@ class profile::tce_estacion {
   }
 
   file_line { 'default cron path':
-    path   => '/etc/default/cron',
     ensure => 'present',
+    path   => '/etc/default/cron',
     line   => 'PATH=/opt/csw/bin:/usr/bin',
     match  => '^.?PATH.*$',
   }
   file_line { 'default cron supath':
-    path   => '/etc/default/cron',
     ensure => 'present',
+    path   => '/etc/default/cron',
     line   => 'SUPATH=/opt/csw/bin:/usr/sbin:/usr/bin',
     match  => '^.?SUPATH.*$',
   } ~>
@@ -375,49 +375,49 @@ class profile::tce_estacion {
   }
 
   file_line { 'default path':
-    path   => '/etc/default/login',
     ensure => 'present',
+    path   => '/etc/default/login',
     line   => 'PATH=/opt/csw/bin:/usr/bin',
     match  => '^.?PATH.*$',
   }
   file_line { 'default supath':
-    path   => '/etc/default/login',
     ensure => 'present',
+    path   => '/etc/default/login',
     line   => 'SUPATH=/opt/csw/bin:/usr/sbin:/usr/bin',
     match  => '^.?SUPATH.*$',
   }
 
   file_line { 'default manpath':
-    path   => '/etc/profile',
     ensure => 'present',
+    path   => '/etc/profile',
     line   => 'MANPATH="/opt/csw/share/man:/usr/share/man"',
     match  => '^MANPATH.*$',
   } ->
   file_line { 'export manpath':
-    path   => '/etc/profile',
     ensure => 'present',
+    path   => '/etc/profile',
     line   => 'export MANPATH',
     after  => '^MANPATH.*$',
   }
   file_line { 'delete backspace':
-    path   => '/etc/profile',
     ensure => 'present',
+    path   => '/etc/profile',
     line   => 'stty erase',
   }
   file_line { 'sound permissions':
-    path   => '/etc/profile',
     ensure => 'absent',
+    path   => '/etc/profile',
     line   => 'chmod 666 /devices/pseudo/oss_sadasupport*',
   }
   file_line { 'mirror pkgutil':
-    path   => '/etc/opt/csw/pkgutil.conf',
     ensure => 'present',
+    path   => '/etc/opt/csw/pkgutil.conf',
     line   => 'mirror=http://16.0.96.20/repo/opencsw/testing',
     match  => '^.?mirror.*$',
   } ->
   file_line { 'proxy pkgutil':
-    path   => '/etc/opt/csw/pkgutil.conf',
     ensure => 'present',
+    path   => '/etc/opt/csw/pkgutil.conf',
     line   => 'wgetopts=-nv',
     match  => '^.?wgetopts.*$',
   } ->
@@ -590,4 +590,16 @@ class profile::tce_estacion {
       source => 'puppet:///data/tce_estacion/common/etc/ppp/peers/mbt-ppp',
     }
   }
+
+  file_line { 'auth syslog':
+    ensure => 'present',
+    path   => '/etc/syslog.conf',
+    line   => "auth.notice                    ifdef(`LOGHOST', /var/log/authlog, @loghost)",
+    match  => '^#auth.notice.*$',
+  } ~>
+  service { 'system-log':
+    ensure => 'running',
+    enable => true,
+  }
+
 }
