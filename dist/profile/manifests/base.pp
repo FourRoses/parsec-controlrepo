@@ -26,6 +26,14 @@ class profile::base {
     ensure => latest,
   }
 
+  package {'htop':
+    ensure => latest,
+  }
+
+  package {'gawk':
+    ensure => latest,
+  }
+
   class {'::ntp':
     servers       => hiera('ntp::params::servers'),
     iburst_enable => true,
