@@ -22,12 +22,10 @@ class profile::tce_estacion {
 
   include ::motd
 
-  #class {'ssh':
-  #  ssh_gssapiauthentication => 'no',
-  #  sshd_config_use_dns      => 'no',
-  #  sshd_config_print_motd   => 'yes',
-  #  permit_root_login        => 'yes',
-  #}
+  class {'ssh':
+    ssh_gssapiauthentication => 'no',
+    permit_root_login        => 'yes',
+  }
 
   file_line { 'auto_home':
     ensure => 'absent',
