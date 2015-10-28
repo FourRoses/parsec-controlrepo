@@ -2,11 +2,13 @@ class profile::sivestacion {
   class {'::metro::siv::estacion': } ->
 
   class {'::snmp':
-    agentaddress      => hiera('snmp::agentaddress'),
-    views             => hiera('snmp::views'),
-    com2sec           => hiera('snmp::com2sec'),
-    snmpd_config      => hiera('snmp::snmpd_config'),
-    service_hasstatus => hiera('snmp::service_hasstatus'),
+    agentaddress           => hiera('snmp::agentaddress'),
+    views                  => hiera('snmp::views'),
+    com2sec                => hiera('snmp::com2sec'),
+    snmpd_config           => hiera('snmp::snmpd_config'),
+    service_hasstatus      => hiera('snmp::service_hasstatus'),
+    do_not_log_traps       => 'yes',
+    do_not_log_tcpwrappers => 'yes',
   }
 
 
