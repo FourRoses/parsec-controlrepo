@@ -40,12 +40,10 @@ class profile::base {
   }
 
   class {'ssh':
-    server_options => {
-      'GSSAPIAuthentication' => 'no',
-      'UseDNS'               => 'no',
-      'PermitRootLogin'      => 'yes',
-      'PrintMotd'            => 'yes',
-    },
+    ssh_gssapiauthentication => 'no',
+    sshd_config_use_dns      => 'no',
+    sshd_config_print_motd   => 'yes',
+    permit_root_login        => 'yes',
   }
 
   ssh_authorized_key { 'juanjop@t5400':
