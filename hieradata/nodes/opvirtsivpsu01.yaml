@@ -9,6 +9,8 @@ metro::siv::client::ctc_server : 'SIVBROKER1'
 
 x11::wm           : 'motif'
 x11::dm           : 'gdm'
+x11::conf_content : absent
+
 x11vnc::passwd    : 'tce'
 x11vnc::ssl         : true
 
