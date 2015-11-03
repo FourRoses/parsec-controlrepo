@@ -1,5 +1,5 @@
 ---
-profile::poi::apps : ['ctc', 'xpostit', 'rt', 'tce']
+profile::poi::apps : ['ctc', 'xpostit', 'tce']
 
 metro::ctc::monitor : '0'
 metro::ctc::rol : 'observador'
@@ -8,9 +8,7 @@ metro::tn::rol : 'observador'
 
 metro::xpostit::monitor : '0'
 
-metro::tce::client::monitor : '2'
+metro::tce::client::monitor : '1'
 metro::tce::client::id      : '24'
-metro::tce::client::server  : ['CentralTCE', 'CentralPCI']
+metro::tce::client::server  : ['CentralTCE', 'CentralPCI', 'CentralSIV']
 metro::tce::client::rol     : 'desconocido'
-
-metro::rt::monitor : '1'
