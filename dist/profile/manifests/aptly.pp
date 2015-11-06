@@ -24,10 +24,11 @@ class profile::aptly {
     repo => false,
   }
 
-  aptly::mirror { 'puppetlabs':
+  aptly::mirror { 'puppetlabs-trusty':
     location      => 'http://apt.puppetlabs.com/',
-    repos         => ['main', 'dependencies'],
+    repos         => ['PC1', 'main', 'dependencies'],
     key           => '4BD6EC30',
     architectures => ['i386', 'amd64'],
+    release       => 'trusty
   }
 }
