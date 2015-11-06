@@ -29,6 +29,6 @@ class profile::aptly {
     repos         => ['PC1', 'main', 'dependencies'],
     key           => '4BD6EC30',
     architectures => ['i386', 'amd64'],
-    release       => 'trusty
+    release       => 'trusty',
   }
 }
