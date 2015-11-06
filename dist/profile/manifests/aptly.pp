@@ -1,5 +1,10 @@
 class profile::aptly {
 
+  file_line { 'system-wide proxy':
+    path => '/etc/environment',
+    line => 'http_proxy=http://amiweb:webami@10.2.21.50:8080/',
+  }
+
   apt::source { 'aptly':
     ensure      => present,
     location    => 'http://16.0.96.20:3142/repo.aptly.info',
@@ -17,5 +22,11 @@ class profile::aptly {
   } ->
   class {'::aptly':
     repo => false,
+  }
+
+  aptly::mirror { 'puppetlabs':
+    location => 'http://apt.puppetlabs.com/',
+    repos    => ['main', 'dependencies'],
+    key      => '4BD6EC30',
   }
 }
