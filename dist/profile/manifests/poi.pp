@@ -16,7 +16,7 @@ class profile::poi (
   }
 
   # ::interfaces
-  class { 'network':
+  class { '::network':
     config_file_notify => '',
   }
 
