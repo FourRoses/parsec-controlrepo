@@ -28,4 +28,5 @@ mod "theforeman/tftp", "1.6.0"
 mod "thias/samba", "0.1.5"
 mod "ethtool",
   :git => "https://github.com/juaningan/puppet-ethtool.git"
-
+mod "aptly",
+  :git => "https://github.com/gds-operations/puppet-aptly.git"
