@@ -8,7 +8,7 @@ class profile::tce_solo {
   }
 
   # ::interfaces
-  class { 'network':
+  class { '::network':
     config_file_notify => '',
   }
 

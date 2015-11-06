@@ -8,7 +8,7 @@ class profile::siv_solo {
   }
 
   # ::interfaces
-  class { 'network':
+  class { '::network':
     config_file_notify => '',
   }
 
