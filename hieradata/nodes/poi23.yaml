@@ -12,3 +12,4 @@ metro::tce::client::monitor : '1'
 metro::tce::client::id      : '24'
 metro::tce::client::server  : ['CentralTCE', 'CentralPCI', 'CentralSIV']
 metro::tce::client::rol     : 'desconocido'
+metro::tce::client::interfonia : true
