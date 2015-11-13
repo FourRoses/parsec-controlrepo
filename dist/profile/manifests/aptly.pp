@@ -34,7 +34,7 @@ class profile::aptly {
   aptly::mirror { 'trusty-main':
     location      => 'http://archive.ubuntu.com/ubuntu',
     repos         => ['main'],
-    key           => 'C0B21F32',
+    key           => '437D05B5',
     architectures => ['i386', 'amd64'],
     release       => 'trusty',
   }
