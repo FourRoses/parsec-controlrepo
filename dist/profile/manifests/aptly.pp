@@ -38,4 +38,18 @@ class profile::aptly {
     architectures => ['i386', 'amd64'],
     release       => 'trusty',
   }
+  aptly::mirror { 'trusty-security-main':
+    location      => 'http://archive.ubuntu.com/ubuntu',
+    repos         => ['main'],
+    key           => '437D05B5',
+    architectures => ['i386', 'amd64'],
+    release       => 'trusty-security',
+  }
+  aptly::mirror { 'trusty-updates-main':
+    location      => 'http://archive.ubuntu.com/ubuntu',
+    repos         => ['main'],
+    key           => '437D05B5',
+    architectures => ['i386', 'amd64'],
+    release       => 'trusty-updates',
+  }
 }
