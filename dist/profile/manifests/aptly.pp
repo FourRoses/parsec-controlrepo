@@ -24,32 +24,32 @@ class profile::aptly {
     repo => false,
   }
 
-  aptly::mirror { 'puppetlabs-trusty':
+  aptly::mirror { 'puppetlabs-trusty-i386':
     location      => 'http://apt.puppetlabs.com/',
     repos         => ['PC1', 'main', 'dependencies'],
     key           => '4BD6EC30',
-    architectures => ['i386', 'amd64'],
+    architectures => ['i386'],
     release       => 'trusty',
   }
-  aptly::mirror { 'trusty-main':
+  aptly::mirror { 'trusty-main-i386':
     location      => 'http://archive.ubuntu.com/ubuntu',
     repos         => ['main'],
     key           => '437D05B5',
-    architectures => ['i386', 'amd64'],
+    architectures => ['i386'],
     release       => 'trusty',
   }
-  aptly::mirror { 'trusty-security-main':
+  aptly::mirror { 'trusty-security-main-i386':
     location      => 'http://archive.ubuntu.com/ubuntu',
     repos         => ['main'],
     key           => '437D05B5',
-    architectures => ['i386', 'amd64'],
+    architectures => ['i386'],
     release       => 'trusty-security',
   }
-  aptly::mirror { 'trusty-updates-main':
+  aptly::mirror { 'trusty-updates-main-i386':
     location      => 'http://archive.ubuntu.com/ubuntu',
     repos         => ['main'],
     key           => '437D05B5',
-    architectures => ['i386', 'amd64'],
+    architectures => ['i386'],
     release       => 'trusty-updates',
   }
 }
