@@ -52,4 +52,29 @@ class profile::aptly {
     architectures => ['i386'],
     release       => 'trusty-updates',
   }
+
+  cron { 'aptly trusty-main-i386':
+    command => '/usr/bin/aptly mirror update trusty-main-i386',
+    user    => root,
+    hour    => 2,
+    minute  => 0
+  }
+  cron { 'aptly trusty-security-main-i386':
+    command => '/usr/bin/aptly mirror update trusty-security-main-i386',
+    user    => root,
+    hour    => 3,
+    minute  => 0
+  }
+  cron { 'aptly trusty-updates-main-i386':
+    command => '/usr/bin/aptly mirror update trusty-updates-main-i386',
+    user    => root,
+    hour    => 4,
+    minute  => 0
+  }
+  cron { 'aptly puppetlabs-trusty-i386':
+    command => '/usr/bin/aptly mirror update puppetlabs-trusty-i386',
+    user    => root,
+    hour    => 5,
+    minute  => 0
+  }
 }
