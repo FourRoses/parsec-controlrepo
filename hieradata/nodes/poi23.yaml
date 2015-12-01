@@ -5,6 +5,8 @@ metro::ctc::monitor : '0'
 metro::ctc::rol : 'observador'
 metro::ctc::tel : true
 
+metro::tn::rol : 'observador'
+
 metro::xpostit::monitor : '0'
 
 metro::isacd::monitor : '2'
