@@ -29,7 +29,7 @@ uis:
 #        caras: []
 #        tipo: CARTEL_MP
 #        tty: '16'
-arcom: 
+#arcom: 
 #  '1':
 #    ip: 
 #    cartel: TeleCancela01
