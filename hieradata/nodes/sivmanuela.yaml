@@ -27,7 +27,7 @@ uis:
         puerto: '13'
         caras: [6,8]
         tipo: CARTEL_MP
-        tty: '14'
+        tty: '16'
       L12Vest01:
         puerto: '14'
         caras: [1,2]
